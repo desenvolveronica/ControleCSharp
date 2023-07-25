@@ -16,5 +16,10 @@ namespace Controle_c_
         {
             InitializeComponent();
         }
+
+        private void frmCadCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

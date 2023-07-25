@@ -62,7 +62,7 @@
             this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMax.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMax.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMax.Location = new System.Drawing.Point(1218, 6);
+            this.btnMax.Location = new System.Drawing.Point(1227, 6);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(75, 34);
             this.btnMax.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.btnMaxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxi.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaxi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMaxi.Location = new System.Drawing.Point(1299, 6);
+            this.btnMaxi.Location = new System.Drawing.Point(1308, 6);
             this.btnMaxi.Name = "btnMaxi";
             this.btnMaxi.Size = new System.Drawing.Size(75, 34);
             this.btnMaxi.TabIndex = 1;
@@ -90,7 +90,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSair.Location = new System.Drawing.Point(1380, 6);
+            this.btnSair.Location = new System.Drawing.Point(1389, 6);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 34);
             this.btnSair.TabIndex = 0;

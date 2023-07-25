@@ -39,6 +39,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadCliente";
             this.Text = "frmCadCliente";
+            this.Load += new System.EventHandler(this.frmCadCliente_Load);
             this.ResumeLayout(false);
 
         }

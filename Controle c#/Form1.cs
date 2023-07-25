@@ -67,10 +67,12 @@ namespace Controle_c_
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja mesmo sair sair?", "Controle c#", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+           frmCadCliente cliente = new frmCadCliente(); //ao clicar no btn cliente eu estou instanciando o formulário
+            cliente.TopLevel = false; //aqui falo que ele não será topo
+            cliente.Dock = DockStyle.Fill; //aqui falo que ele preencherá o meio 
+            PanelCentral.Controls.Clear(); //limpa o painel
+            PanelCentral.Controls.Add(cliente);//adiciona o form no painel
+            cliente.Show();//para aparecer o formulário
         }
 
         private void btnHome_Click_1(object sender, EventArgs e)
