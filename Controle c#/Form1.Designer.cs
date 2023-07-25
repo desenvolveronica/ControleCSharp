@@ -40,6 +40,7 @@
             this.btnAnimais = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.PanelCentral = new System.Windows.Forms.Panel();
+            this.panelSelecao = new System.Windows.Forms.Panel();
             this.PanelTop.SuspendLayout();
             this.PanelLateral.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +102,7 @@
             // PanelLateral
             // 
             this.PanelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.PanelLateral.Controls.Add(this.panelSelecao);
             this.PanelLateral.Controls.Add(this.btnHome);
             this.PanelLateral.Controls.Add(this.btnAgendamentos);
             this.PanelLateral.Controls.Add(this.btnServicos);
@@ -110,17 +112,17 @@
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLateral.Location = new System.Drawing.Point(0, 43);
             this.PanelLateral.Name = "PanelLateral";
-            this.PanelLateral.Size = new System.Drawing.Size(283, 684);
+            this.PanelLateral.Size = new System.Drawing.Size(276, 684);
             this.PanelLateral.TabIndex = 1;
             // 
             // btnHome
             // 
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnHome.Location = new System.Drawing.Point(57, 45);
+            this.btnHome.Location = new System.Drawing.Point(56, 75);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(171, 47);
+            this.btnHome.Size = new System.Drawing.Size(192, 50);
             this.btnHome.TabIndex = 5;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -129,11 +131,11 @@
             // btnAgendamentos
             // 
             this.btnAgendamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgendamentos.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendamentos.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendamentos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAgendamentos.Location = new System.Drawing.Point(57, 369);
+            this.btnAgendamentos.Location = new System.Drawing.Point(56, 393);
             this.btnAgendamentos.Name = "btnAgendamentos";
-            this.btnAgendamentos.Size = new System.Drawing.Size(171, 46);
+            this.btnAgendamentos.Size = new System.Drawing.Size(192, 46);
             this.btnAgendamentos.TabIndex = 4;
             this.btnAgendamentos.Text = "Agendamentos";
             this.btnAgendamentos.UseVisualStyleBackColor = true;
@@ -142,11 +144,11 @@
             // btnServicos
             // 
             this.btnServicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicos.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServicos.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnServicos.Location = new System.Drawing.Point(57, 301);
+            this.btnServicos.Location = new System.Drawing.Point(56, 330);
             this.btnServicos.Name = "btnServicos";
-            this.btnServicos.Size = new System.Drawing.Size(171, 46);
+            this.btnServicos.Size = new System.Drawing.Size(192, 46);
             this.btnServicos.TabIndex = 3;
             this.btnServicos.Text = "Serviços";
             this.btnServicos.UseVisualStyleBackColor = true;
@@ -155,11 +157,11 @@
             // btnRacas
             // 
             this.btnRacas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRacas.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRacas.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRacas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRacas.Location = new System.Drawing.Point(57, 236);
+            this.btnRacas.Location = new System.Drawing.Point(56, 268);
             this.btnRacas.Name = "btnRacas";
-            this.btnRacas.Size = new System.Drawing.Size(171, 46);
+            this.btnRacas.Size = new System.Drawing.Size(192, 46);
             this.btnRacas.TabIndex = 2;
             this.btnRacas.Text = "Raças";
             this.btnRacas.UseVisualStyleBackColor = true;
@@ -168,11 +170,11 @@
             // btnAnimais
             // 
             this.btnAnimais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnimais.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnimais.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnimais.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAnimais.Location = new System.Drawing.Point(57, 175);
+            this.btnAnimais.Location = new System.Drawing.Point(56, 205);
             this.btnAnimais.Name = "btnAnimais";
-            this.btnAnimais.Size = new System.Drawing.Size(171, 46);
+            this.btnAnimais.Size = new System.Drawing.Size(192, 46);
             this.btnAnimais.TabIndex = 1;
             this.btnAnimais.Text = "Animais";
             this.btnAnimais.UseVisualStyleBackColor = true;
@@ -181,11 +183,11 @@
             // btnClientes
             // 
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnClientes.Location = new System.Drawing.Point(57, 111);
+            this.btnClientes.Location = new System.Drawing.Point(56, 143);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(171, 47);
+            this.btnClientes.Size = new System.Drawing.Size(192, 47);
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
@@ -197,10 +199,19 @@
             this.PanelCentral.BackgroundImage = global::Controle_c_.Properties.Resources._4ffaface5622100f56e41a6d4f8e7631eff815af;
             this.PanelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCentral.Location = new System.Drawing.Point(283, 43);
+            this.PanelCentral.Location = new System.Drawing.Point(276, 43);
             this.PanelCentral.Name = "PanelCentral";
-            this.PanelCentral.Size = new System.Drawing.Size(1184, 684);
+            this.PanelCentral.Size = new System.Drawing.Size(1191, 684);
             this.PanelCentral.TabIndex = 2;
+            // 
+            // panelSelecao
+            // 
+            this.panelSelecao.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelSelecao.Location = new System.Drawing.Point(26, 75);
+            this.panelSelecao.Name = "panelSelecao";
+            this.panelSelecao.Size = new System.Drawing.Size(24, 50);
+            this.panelSelecao.TabIndex = 6;
+            this.panelSelecao.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
@@ -236,6 +247,7 @@
         private System.Windows.Forms.Button btnMaxi;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Panel panelSelecao;
     }
 }
 
