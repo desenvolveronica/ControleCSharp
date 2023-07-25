@@ -1,6 +1,6 @@
 ﻿namespace Controle_c_
 {
-    partial class frmCadCliente
+    partial class frmCadServicos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // frmCadCliente
+            // frmCadServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 684);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1191, 684);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCadCliente";
-            this.Text = "frmCadCliente";
-            this.Load += new System.EventHandler(this.frmCadCliente_Load);
+            this.Name = "frmCadServicos";
+            this.Text = "frmCadServicos";
             this.ResumeLayout(false);
 
         }

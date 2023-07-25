@@ -1,6 +1,6 @@
 ﻿namespace Controle_c_
 {
-    partial class frmCadCliente
+    partial class frmCadAgendamento
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // frmCadCliente
+            // frmCadAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 684);
+            this.ClientSize = new System.Drawing.Size(1191, 684);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCadCliente";
-            this.Text = "frmCadCliente";
-            this.Load += new System.EventHandler(this.frmCadCliente_Load);
+            this.Name = "frmCadAgendamento";
+            this.Text = "frmCadAgendamento";
             this.ResumeLayout(false);
 
         }

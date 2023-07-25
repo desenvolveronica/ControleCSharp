@@ -25,43 +25,10 @@ namespace Controle_c_
                 Application.Exit();
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {   //aplica a posição do eixo Y do botão ao panel seleção
-            panelSelecao.Top = btnAnimais.Top;
-            PanelCentral.Controls.Clear();
-        }
-
-        private void btnRacas_Click(object sender, EventArgs e)
-        {   //aplica a posição do eixo Y do botão ao panel seleção
-            panelSelecao.Top = btnRacas.Top;
-            PanelCentral.Controls.Clear();
-
-        }
        
-
-        private void btnAgendamentos_Click(object sender, EventArgs e)
-        {   //aplica a posição do eixo Y do botão ao panel seleção
-            panelSelecao.Top = btnAgendamentos.Top;
-            PanelCentral.Controls.Clear();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            
-            if(MessageBox.Show("Deseja mesmo sair sair?", "Controle c#", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void btnMaxi_Click(object sender, EventArgs e)
-        {   //Minimizar 
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btnClientes_Click(object sender, EventArgs e)
         {
-           frmCadCliente cliente = new frmCadCliente(); //ao clicar no btn cliente eu estou instanciando o formulário
+            frmCadCliente cliente = new frmCadCliente(); //ao clicar no btn cliente eu estou instanciando o formulário
             cliente.TopLevel = false; //aqui falo que ele não será topo
             cliente.Dock = DockStyle.Fill; //aqui falo que ele preencherá o meio 
             PanelCentral.Controls.Clear(); //limpa o painel
@@ -72,6 +39,71 @@ namespace Controle_c_
 
             panelSelecao.Top = btnClientes.Top;
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmCadAnimais animais = new frmCadAnimais();
+            animais.TopLevel = false;
+            animais.Dock = DockStyle.Fill;
+            PanelCentral.Controls.Clear();
+            PanelCentral.Controls.Add(animais);
+            animais.Show();
+
+            //aplica a posição do eixo Y do botão ao panel seleção
+            panelSelecao.Top = btnAnimais.Top;
+
+
+        }
+
+        private void btnRacas_Click(object sender, EventArgs e)
+        {   //aplica a posição do eixo Y do botão ao panel seleção
+            panelSelecao.Top = btnRacas.Top;
+           
+            frmCadRacas racas = new frmCadRacas();
+            racas.TopLevel = false;
+            racas.Dock = DockStyle.Fill;
+            PanelCentral.Controls.Clear();
+            PanelCentral.Controls.Add(racas);
+            racas.Show();
+        }
+        private void btnServicos_Click(object sender, EventArgs e)
+        {   //aplica a posição do eixo Y do botão ao panel seleção
+            panelSelecao.Top = btnServicos.Top;
+            frmCadServicos servicos = new frmCadServicos();
+            servicos.TopLevel = false;
+            servicos.Dock = DockStyle.Fill;
+            PanelCentral.Controls.Clear();
+            PanelCentral.Controls.Add(servicos);
+            servicos.Show();
+        }
+
+        private void btnAgendamentos_Click(object sender, EventArgs e)
+        {   //aplica a posição do eixo Y do botão ao panel seleção
+            panelSelecao.Top = btnAgendamentos.Top;
+
+            frmCadAgendamento agendamento = new frmCadAgendamento();
+            agendamento.TopLevel = false;
+            agendamento.Dock = DockStyle.Fill;
+            PanelCentral.Controls.Clear();
+            PanelCentral.Controls.Add(agendamento);
+            agendamento.Show();
+        }
+
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            
+            if(MessageBox.Show("Deseja mesmo sair?", "Controle c#", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnMaxi_Click(object sender, EventArgs e)
+        {   //Minimizar 
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+      
 
         private void btnHome_Click_1(object sender, EventArgs e)
         {
@@ -81,11 +113,7 @@ namespace Controle_c_
             PanelCentral.Controls.Clear();
         }
 
-        private void btnServicos_Click(object sender, EventArgs e)
-        {   //aplica a posição do eixo Y do botão ao panel seleção
-            panelSelecao.Top = btnServicos.Top;
-            PanelCentral.Controls.Clear();
-        }
+       
 
         private void button1_Click_1(object sender, EventArgs e)
         {   //maximizar 
