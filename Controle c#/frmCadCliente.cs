@@ -19,6 +19,26 @@ namespace Controle_c_
 
         private void frmCadCliente_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter.Fill(this.masterDataSet.cliente);
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter.Fill(this.masterDataSet.cliente);
+
+        }
+
+        private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.clienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
+        private void clienteBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.clienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
         }
     }
