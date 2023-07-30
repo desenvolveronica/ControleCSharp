@@ -157,10 +157,11 @@
             this.groupBox1.Controls.Add(this.cli_enderecoTextBox);
             this.groupBox1.Controls.Add(cli_fotoLabel);
             this.groupBox1.Controls.Add(this.cli_fotoPictureBox);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 44);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(905, 402);
+            this.groupBox1.Size = new System.Drawing.Size(1184, 684);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Cliente";
