@@ -41,5 +41,10 @@ namespace Controle_c_
             this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
         }
+
+        private void cli_cpfMaskedTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
