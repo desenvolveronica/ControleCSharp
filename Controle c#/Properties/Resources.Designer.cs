@@ -73,9 +73,39 @@ namespace Controle_c_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar_imagem {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-imagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adicionar_imagem__1_ {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-imagem (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adotei_um_gatinho {
             get {
                 object obj = ResourceManager.GetObject("adotei-um-gatinho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img {
+            get {
+                object obj = ResourceManager.GetObject("img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

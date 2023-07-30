@@ -147,5 +147,14 @@
   <ItemGroup>
     <None Include="Resources\4ffaface5622100f56e41a6d4f8e7631eff815af.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-imagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-imagem %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

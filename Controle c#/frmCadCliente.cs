@@ -64,7 +64,7 @@ namespace Controle_c_
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja mesmo sair?", "Controle c#", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja mesmo sair?", "PetShop2023", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -100,6 +100,12 @@ namespace Controle_c_
                 MessageBox.Show("Registro não pode ser excluído");
             }
            
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            
         }
     }
 }
