@@ -104,8 +104,26 @@ namespace Controle_c_
 
         private void btnFoto_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            try
+            {
+                openFileDialog1.Filter = "Fotos (*.jpg; *.png; *.PNG) | *.jpg; *.pgn; *.PNG"; //adiciona o filtro para não pegar qualquer arquivo
+                if (openFileDialog1.ShowDialog() == DialogResult.OK) // somente se a pessoa clicar em abrir que ela vai salvar  >> clicou em cancelar ele não faz nada
+                {
+                    cli_fotoPictureBox.Image = new Bitmap(openFileDialog1.FileName);
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possivel carregar esta imagem", "PetShop2023", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             
+        }
+
+        private void cli_fotoPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -414,7 +414,7 @@
             this.btnFoto.BackgroundImage = global::Controle_c_.Properties.Resources.img;
             this.btnFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoto.Location = new System.Drawing.Point(316, 264);
+            this.btnFoto.Location = new System.Drawing.Point(285, 263);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(40, 40);
             this.btnFoto.TabIndex = 14;
@@ -423,12 +423,16 @@
             // 
             // cli_fotoPictureBox
             // 
+            this.cli_fotoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cli_fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cli_fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "cli_foto", true));
             this.cli_fotoPictureBox.Location = new System.Drawing.Point(114, 221);
             this.cli_fotoPictureBox.Name = "cli_fotoPictureBox";
             this.cli_fotoPictureBox.Size = new System.Drawing.Size(134, 125);
+            this.cli_fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cli_fotoPictureBox.TabIndex = 13;
             this.cli_fotoPictureBox.TabStop = false;
+            this.cli_fotoPictureBox.Click += new System.EventHandler(this.cli_fotoPictureBox_Click);
             // 
             // openFileDialog1
             // 
