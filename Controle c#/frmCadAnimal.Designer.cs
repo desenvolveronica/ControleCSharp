@@ -317,7 +317,7 @@
             "M"});
             this.ani_sexoComboBox.Location = new System.Drawing.Point(286, 151);
             this.ani_sexoComboBox.Name = "ani_sexoComboBox";
-            this.ani_sexoComboBox.Size = new System.Drawing.Size(121, 28);
+            this.ani_sexoComboBox.Size = new System.Drawing.Size(62, 28);
             this.ani_sexoComboBox.TabIndex = 5;
             // 
             // ani_agressivoLabel
@@ -338,7 +338,7 @@
             "N"});
             this.ani_agressivoComboBox.Location = new System.Drawing.Point(286, 185);
             this.ani_agressivoComboBox.Name = "ani_agressivoComboBox";
-            this.ani_agressivoComboBox.Size = new System.Drawing.Size(121, 28);
+            this.ani_agressivoComboBox.Size = new System.Drawing.Size(62, 28);
             this.ani_agressivoComboBox.TabIndex = 7;
             // 
             // ani_corLabel
@@ -360,7 +360,7 @@
             "COLORIDO"});
             this.ani_corComboBox.Location = new System.Drawing.Point(286, 219);
             this.ani_corComboBox.Name = "ani_corComboBox";
-            this.ani_corComboBox.Size = new System.Drawing.Size(121, 28);
+            this.ani_corComboBox.Size = new System.Drawing.Size(192, 28);
             this.ani_corComboBox.TabIndex = 9;
             // 
             // ani_idadeLabel
