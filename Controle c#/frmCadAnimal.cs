@@ -27,6 +27,10 @@ namespace Controle_c_
 
         private void frmCadAnimal_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.raca'. Você pode movê-la ou removê-la conforme necessário.
+            this.racaTableAdapter.Fill(this.masterDataSet.raca);
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter.Fill(this.masterDataSet.cliente);
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.animal'. Você pode movê-la ou removê-la conforme necessário.
             this.animalTableAdapter.Fill(this.masterDataSet.animal);
 
@@ -38,6 +42,11 @@ namespace Controle_c_
         }
 
         private void ani_alergiaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ani_racaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -68,6 +68,12 @@
             this.ani_clienteComboBox = new System.Windows.Forms.ComboBox();
             this.ani_racaComboBox = new System.Windows.Forms.ComboBox();
             this.ani_fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new Controle_c_.masterDataSetTableAdapters.clienteTableAdapter();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.racaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.racaTableAdapter = new Controle_c_.masterDataSetTableAdapters.racaTableAdapter();
+            this.clienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ani_codigoLabel = new System.Windows.Forms.Label();
             ani_nomeLabel = new System.Windows.Forms.Label();
             ani_sexoLabel = new System.Windows.Forms.Label();
@@ -84,6 +90,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingNavigator)).BeginInit();
             this.animalBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ani_fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -135,8 +145,8 @@
             this.tableAdapterManager.agendamentoTableAdapter = null;
             this.tableAdapterManager.animalTableAdapter = this.animalTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.clienteTableAdapter = null;
-            this.tableAdapterManager.racaTableAdapter = null;
+            this.tableAdapterManager.clienteTableAdapter = this.clienteTableAdapter;
+            this.tableAdapterManager.racaTableAdapter = this.racaTableAdapter;
             this.tableAdapterManager.servicoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Controle_c_.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -412,12 +422,15 @@
             // 
             // ani_clienteComboBox
             // 
-            this.ani_clienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_cliente", true));
+            this.ani_clienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animalBindingSource, "ani_cliente", true));
+            this.ani_clienteComboBox.DataSource = this.clienteBindingSource2;
+            this.ani_clienteComboBox.DisplayMember = "cli_nome";
             this.ani_clienteComboBox.FormattingEnabled = true;
             this.ani_clienteComboBox.Location = new System.Drawing.Point(286, 380);
             this.ani_clienteComboBox.Name = "ani_clienteComboBox";
-            this.ani_clienteComboBox.Size = new System.Drawing.Size(121, 28);
+            this.ani_clienteComboBox.Size = new System.Drawing.Size(192, 28);
             this.ani_clienteComboBox.TabIndex = 15;
+            this.ani_clienteComboBox.ValueMember = "cli_codigo";
             // 
             // ani_racaLabel
             // 
@@ -430,12 +443,16 @@
             // 
             // ani_racaComboBox
             // 
-            this.ani_racaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_raca", true));
+            this.ani_racaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animalBindingSource, "ani_raca", true));
+            this.ani_racaComboBox.DataSource = this.racaBindingSource;
+            this.ani_racaComboBox.DisplayMember = "raca_nome";
             this.ani_racaComboBox.FormattingEnabled = true;
             this.ani_racaComboBox.Location = new System.Drawing.Point(286, 414);
             this.ani_racaComboBox.Name = "ani_racaComboBox";
-            this.ani_racaComboBox.Size = new System.Drawing.Size(121, 28);
+            this.ani_racaComboBox.Size = new System.Drawing.Size(192, 28);
             this.ani_racaComboBox.TabIndex = 17;
+            this.ani_racaComboBox.ValueMember = "raca_codigo";
+            this.ani_racaComboBox.SelectedIndexChanged += new System.EventHandler(this.ani_racaComboBox_SelectedIndexChanged);
             // 
             // ani_fotoLabel
             // 
@@ -457,6 +474,34 @@
             this.ani_fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ani_fotoPictureBox.TabIndex = 19;
             this.ani_fotoPictureBox.TabStop = false;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "cliente";
+            this.clienteBindingSource.DataSource = this.masterDataSet;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataMember = "cliente";
+            this.clienteBindingSource1.DataSource = this.masterDataSet;
+            // 
+            // racaBindingSource
+            // 
+            this.racaBindingSource.DataMember = "raca";
+            this.racaBindingSource.DataSource = this.masterDataSet;
+            // 
+            // racaTableAdapter
+            // 
+            this.racaTableAdapter.ClearBeforeFill = true;
+            // 
+            // clienteBindingSource2
+            // 
+            this.clienteBindingSource2.DataMember = "cliente";
+            this.clienteBindingSource2.DataSource = this.masterDataSet;
             // 
             // frmCadAnimal
             // 
@@ -480,6 +525,10 @@
             this.animalBindingNavigator.ResumeLayout(false);
             this.animalBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ani_fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,5 +564,11 @@
         private System.Windows.Forms.ComboBox ani_clienteComboBox;
         private System.Windows.Forms.ComboBox ani_racaComboBox;
         private System.Windows.Forms.PictureBox ani_fotoPictureBox;
+        private masterDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private System.Windows.Forms.BindingSource clienteBindingSource1;
+        private masterDataSetTableAdapters.racaTableAdapter racaTableAdapter;
+        private System.Windows.Forms.BindingSource racaBindingSource;
+        private System.Windows.Forms.BindingSource clienteBindingSource2;
     }
 }
