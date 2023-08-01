@@ -41,7 +41,7 @@ namespace Controle_c_
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            frmCadAnimais animais = new frmCadAnimais();
+            frmCadAnimal animais = new frmCadAnimal();
             animais.TopLevel = false;
             animais.Dock = DockStyle.Fill;
             PanelCentral.Controls.Clear();
