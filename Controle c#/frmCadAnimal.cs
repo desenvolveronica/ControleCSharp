@@ -36,5 +36,10 @@ namespace Controle_c_
         {
 
         }
+
+        private void ani_alergiaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

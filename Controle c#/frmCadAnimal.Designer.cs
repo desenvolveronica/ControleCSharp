@@ -357,7 +357,8 @@
             this.ani_corComboBox.Items.AddRange(new object[] {
             "BRANCO",
             "PRETO",
-            "COLORIDO"});
+            "COLORIDO",
+            "CARAMELO"});
             this.ani_corComboBox.Location = new System.Drawing.Point(286, 219);
             this.ani_corComboBox.Name = "ani_corComboBox";
             this.ani_corComboBox.Size = new System.Drawing.Size(192, 28);
@@ -392,15 +393,18 @@
             // ani_alergiaTextBox
             // 
             this.ani_alergiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_alergia", true));
-            this.ani_alergiaTextBox.Location = new System.Drawing.Point(286, 285);
+            this.ani_alergiaTextBox.Location = new System.Drawing.Point(286, 288);
+            this.ani_alergiaTextBox.MaxLength = 50;
+            this.ani_alergiaTextBox.Multiline = true;
             this.ani_alergiaTextBox.Name = "ani_alergiaTextBox";
-            this.ani_alergiaTextBox.Size = new System.Drawing.Size(121, 26);
+            this.ani_alergiaTextBox.Size = new System.Drawing.Size(283, 86);
             this.ani_alergiaTextBox.TabIndex = 13;
+            this.ani_alergiaTextBox.TextChanged += new System.EventHandler(this.ani_alergiaTextBox_TextChanged);
             // 
             // ani_clienteLabel
             // 
             ani_clienteLabel.AutoSize = true;
-            ani_clienteLabel.Location = new System.Drawing.Point(175, 320);
+            ani_clienteLabel.Location = new System.Drawing.Point(176, 383);
             ani_clienteLabel.Name = "ani_clienteLabel";
             ani_clienteLabel.Size = new System.Drawing.Size(84, 20);
             ani_clienteLabel.TabIndex = 14;
@@ -410,7 +414,7 @@
             // 
             this.ani_clienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_cliente", true));
             this.ani_clienteComboBox.FormattingEnabled = true;
-            this.ani_clienteComboBox.Location = new System.Drawing.Point(286, 317);
+            this.ani_clienteComboBox.Location = new System.Drawing.Point(286, 380);
             this.ani_clienteComboBox.Name = "ani_clienteComboBox";
             this.ani_clienteComboBox.Size = new System.Drawing.Size(121, 28);
             this.ani_clienteComboBox.TabIndex = 15;
@@ -418,7 +422,7 @@
             // ani_racaLabel
             // 
             ani_racaLabel.AutoSize = true;
-            ani_racaLabel.Location = new System.Drawing.Point(175, 354);
+            ani_racaLabel.Location = new System.Drawing.Point(175, 413);
             ani_racaLabel.Name = "ani_racaLabel";
             ani_racaLabel.Size = new System.Drawing.Size(69, 20);
             ani_racaLabel.TabIndex = 16;
@@ -428,7 +432,7 @@
             // 
             this.ani_racaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_raca", true));
             this.ani_racaComboBox.FormattingEnabled = true;
-            this.ani_racaComboBox.Location = new System.Drawing.Point(286, 351);
+            this.ani_racaComboBox.Location = new System.Drawing.Point(286, 414);
             this.ani_racaComboBox.Name = "ani_racaComboBox";
             this.ani_racaComboBox.Size = new System.Drawing.Size(121, 28);
             this.ani_racaComboBox.TabIndex = 17;
