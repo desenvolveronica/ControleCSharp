@@ -53,13 +53,19 @@ namespace Controle_c_
 
         private void btnFoto_ani_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Fotos_Ani (*.PNG; *.JPG; *.png; *.jpg) | *.PNG; *.JPG; *.png; *.jpg";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                ani_fotoPictureBox.Image = new Bitmap(openFileDialog1.FileName);
+                openFileDialog1.Filter = "Fotos_Ani (*.PNG; *.JPG; *.png; *.jpg) | *.PNG; *.JPG; *.png; *.jpg";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    ani_fotoPictureBox.Image = new Bitmap(openFileDialog1.FileName);
+                }
+            }catch(Exception)
+            {
+                MessageBox.Show("Não foi possivel carregar esta imagem", "PetShop2023", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
         }
     }
 }
