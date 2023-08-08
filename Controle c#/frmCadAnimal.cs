@@ -50,5 +50,16 @@ namespace Controle_c_
         {
 
         }
+
+        private void btnFoto_ani_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Fotos_Ani (*.PNG; *.JPG; *.png; *.jpg) | *.PNG; *.JPG; *.png; *.jpg";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ani_fotoPictureBox.Image = new Bitmap(openFileDialog1.FileName);
+            }
+
+            
+        }
     }
 }
