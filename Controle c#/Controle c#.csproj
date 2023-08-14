@@ -94,6 +94,18 @@
     <Compile Include="frmCadCliente.Designer.cs">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadRaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadRaca.Designer.cs">
+      <DependentUpon>frmCadRaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadServico.Designer.cs">
+      <DependentUpon>frmCadServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadCliente.resx">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadRaca.resx">
+      <DependentUpon>frmCadRaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadServico.resx">
+      <DependentUpon>frmCadServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
