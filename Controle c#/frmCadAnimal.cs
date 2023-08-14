@@ -88,5 +88,25 @@ namespace Controle_c_
             groupBox1.Enabled = true;
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Você quer mesmo excluir este registro?", "PetShop2023", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    animalBindingSource.RemoveCurrent(); //removeu 
+                    animalTableAdapter.Update(masterDataSet.animal); //salva
+                    MessageBox.Show("Excluido com sucesso!");
+                }
+
+            }
+            catch (Exception) //captura o erro
+            {   //erro pode acontecer caso tentemos excluir um dado que está sendo usado em outra parte do código
+                //exemplo: usuário que tem registro de pet 
+                animalTableAdapter.Fill(masterDataSet.animal); //coloca os dados novamente pois removeu de forma temporária
+                MessageBox.Show("Registro não pode ser excluído");
+            }
+        }
     }
 }
