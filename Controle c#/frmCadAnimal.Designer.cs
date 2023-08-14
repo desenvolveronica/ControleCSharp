@@ -221,7 +221,7 @@
             // 
             // btnFoto_ani
             // 
-            this.btnFoto_ani.BackgroundImage = global::Controle_c_.Properties.Resources.pet;
+            this.btnFoto_ani.BackgroundImage = global::Controle_c_.Properties.Resources.bicho_de_estimacao;
             this.btnFoto_ani.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFoto_ani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFoto_ani.Location = new System.Drawing.Point(734, 151);
