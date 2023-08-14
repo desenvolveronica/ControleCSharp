@@ -19,9 +19,19 @@ namespace Controle_c_
 
         private void animalBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.animalBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+            try //tente
+            {
+                this.Validate();
+                this.animalBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.masterDataSet);
+                groupBox1.Enabled = false;
+                MessageBox.Show("Salvo com sucesso");
+            }
+            catch (Exception)
+            { //captura o erro
+                MessageBox.Show("Ocorreu um erro, verifique os valores informados");
+            }
+
 
         }
 
@@ -70,6 +80,12 @@ namespace Controle_c_
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
 
         }
     }
