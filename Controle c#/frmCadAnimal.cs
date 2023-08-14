@@ -67,5 +67,10 @@ namespace Controle_c_
 
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
