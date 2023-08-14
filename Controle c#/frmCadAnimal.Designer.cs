@@ -77,6 +77,7 @@
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             ani_codigoLabel = new System.Windows.Forms.Label();
             ani_nomeLabel = new System.Windows.Forms.Label();
             ani_sexoLabel = new System.Windows.Forms.Label();
@@ -407,7 +408,8 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.animalBindingNavigatorSaveItem,
-            this.btnEditar});
+            this.btnEditar,
+            this.btnCancelar});
             this.animalBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.animalBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.animalBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -540,6 +542,15 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(87, 34);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmCadAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -610,5 +621,6 @@
         private System.Windows.Forms.Button btnFoto_ani;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolStripButton btnEditar;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
     }
 }

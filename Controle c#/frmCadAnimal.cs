@@ -108,5 +108,11 @@ namespace Controle_c_
                 MessageBox.Show("Registro não pode ser excluído");
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            animalBindingSource.CancelEdit();
+            groupBox1.Enabled=false;
+        }
     }
 }
