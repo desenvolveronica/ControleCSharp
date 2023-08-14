@@ -212,9 +212,9 @@
             this.groupBox1.Controls.Add(this.ani_racaComboBox);
             this.groupBox1.Controls.Add(ani_fotoLabel);
             this.groupBox1.Controls.Add(this.ani_fotoPictureBox);
-            this.groupBox1.Location = new System.Drawing.Point(0, 28);
+            this.groupBox1.Location = new System.Drawing.Point(0, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1309, 737);
+            this.groupBox1.Size = new System.Drawing.Size(1309, 713);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do animal";
@@ -391,6 +391,7 @@
             this.animalBindingNavigator.BindingSource = this.animalBindingSource;
             this.animalBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.animalBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.animalBindingNavigator.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.animalBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
