@@ -257,6 +257,7 @@
             // 
             // ani_nomeTextBox
             // 
+            this.ani_nomeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_nome", true));
             this.ani_nomeTextBox.Location = new System.Drawing.Point(286, 119);
             this.ani_nomeTextBox.Name = "ani_nomeTextBox";
@@ -265,6 +266,7 @@
             // 
             // ani_sexoComboBox
             // 
+            this.ani_sexoComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_sexoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_sexo", true));
             this.ani_sexoComboBox.FormattingEnabled = true;
             this.ani_sexoComboBox.Items.AddRange(new object[] {
@@ -277,6 +279,7 @@
             // 
             // ani_agressivoComboBox
             // 
+            this.ani_agressivoComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_agressivoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_agressivo", true));
             this.ani_agressivoComboBox.FormattingEnabled = true;
             this.ani_agressivoComboBox.Items.AddRange(new object[] {
@@ -289,6 +292,7 @@
             // 
             // ani_corComboBox
             // 
+            this.ani_corComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_corComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_cor", true));
             this.ani_corComboBox.FormattingEnabled = true;
             this.ani_corComboBox.Items.AddRange(new object[] {
@@ -303,6 +307,7 @@
             // 
             // ani_idadeTextBox
             // 
+            this.ani_idadeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_idadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_idade", true));
             this.ani_idadeTextBox.Location = new System.Drawing.Point(286, 253);
             this.ani_idadeTextBox.Name = "ani_idadeTextBox";
@@ -311,6 +316,7 @@
             // 
             // ani_alergiaTextBox
             // 
+            this.ani_alergiaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_alergiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "ani_alergia", true));
             this.ani_alergiaTextBox.Location = new System.Drawing.Point(286, 288);
             this.ani_alergiaTextBox.MaxLength = 50;
@@ -322,6 +328,7 @@
             // 
             // ani_clienteComboBox
             // 
+            this.ani_clienteComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_clienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animalBindingSource, "ani_cliente", true));
             this.ani_clienteComboBox.DataSource = this.clienteBindingSource2;
             this.ani_clienteComboBox.DisplayMember = "cli_nome";
@@ -339,6 +346,7 @@
             // 
             // ani_racaComboBox
             // 
+            this.ani_racaComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ani_racaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animalBindingSource, "ani_raca", true));
             this.ani_racaComboBox.DataSource = this.racaBindingSource;
             this.ani_racaComboBox.DisplayMember = "raca_nome";
@@ -557,6 +565,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1604, 881);
             this.Controls.Add(this.animalBindingNavigator);

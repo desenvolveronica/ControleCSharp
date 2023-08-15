@@ -131,7 +131,7 @@
             // 
             // raca_nomeTextBox
             // 
-            this.raca_nomeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            this.raca_nomeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.raca_nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "raca_nome", true));
             this.raca_nomeTextBox.Location = new System.Drawing.Point(183, 134);
             this.raca_nomeTextBox.Margin = new System.Windows.Forms.Padding(6);
@@ -141,7 +141,7 @@
             // 
             // raca_pais_origemTextBox
             // 
-            this.raca_pais_origemTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            this.raca_pais_origemTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.raca_pais_origemTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "raca_pais_origem", true));
             this.raca_pais_origemTextBox.Location = new System.Drawing.Point(183, 183);
             this.raca_pais_origemTextBox.Margin = new System.Windows.Forms.Padding(6);
@@ -294,6 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1604, 881);
             this.Controls.Add(this.btnCancelar);
