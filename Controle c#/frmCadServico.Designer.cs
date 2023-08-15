@@ -74,7 +74,7 @@
             // serv_codigoLabel
             // 
             serv_codigoLabel.AutoSize = true;
-            serv_codigoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            serv_codigoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             serv_codigoLabel.Location = new System.Drawing.Point(74, 64);
             serv_codigoLabel.Name = "serv_codigoLabel";
             serv_codigoLabel.Size = new System.Drawing.Size(93, 20);
@@ -84,7 +84,7 @@
             // serv_descricaoLabel
             // 
             serv_descricaoLabel.AutoSize = true;
-            serv_descricaoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            serv_descricaoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             serv_descricaoLabel.Location = new System.Drawing.Point(74, 93);
             serv_descricaoLabel.Name = "serv_descricaoLabel";
             serv_descricaoLabel.Size = new System.Drawing.Size(114, 20);
@@ -94,7 +94,7 @@
             // serv_precoLabel
             // 
             serv_precoLabel.AutoSize = true;
-            serv_precoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            serv_precoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             serv_precoLabel.Location = new System.Drawing.Point(74, 125);
             serv_precoLabel.Name = "serv_precoLabel";
             serv_precoLabel.Size = new System.Drawing.Size(86, 20);
@@ -104,7 +104,7 @@
             // serv_tempoLabel
             // 
             serv_tempoLabel.AutoSize = true;
-            serv_tempoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            serv_tempoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             serv_tempoLabel.Location = new System.Drawing.Point(74, 157);
             serv_tempoLabel.Name = "serv_tempoLabel";
             serv_tempoLabel.Size = new System.Drawing.Size(91, 20);
@@ -145,7 +145,7 @@
             // 
             // serv_codigoLabel1
             // 
-            this.serv_codigoLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            this.serv_codigoLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.serv_codigoLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "serv_codigo", true));
             this.serv_codigoLabel1.Location = new System.Drawing.Point(194, 64);
             this.serv_codigoLabel1.Name = "serv_codigoLabel1";
@@ -165,7 +165,7 @@
             // 
             // serv_descricaoTextBox
             // 
-            this.serv_descricaoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            this.serv_descricaoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.serv_descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "serv_descricao", true));
             this.serv_descricaoTextBox.Location = new System.Drawing.Point(194, 90);
             this.serv_descricaoTextBox.Name = "serv_descricaoTextBox";
@@ -174,17 +174,17 @@
             // 
             // serv_precoMaskedTextBox
             // 
-            this.serv_precoMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            this.serv_precoMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.serv_precoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "serv_preco", true));
             this.serv_precoMaskedTextBox.Location = new System.Drawing.Point(194, 122);
-            this.serv_precoMaskedTextBox.Mask = "$ 90";
+            this.serv_precoMaskedTextBox.Mask = "$ 99.99";
             this.serv_precoMaskedTextBox.Name = "serv_precoMaskedTextBox";
             this.serv_precoMaskedTextBox.Size = new System.Drawing.Size(121, 26);
             this.serv_precoMaskedTextBox.TabIndex = 5;
             // 
             // serv_tempoComboBox
             // 
-            this.serv_tempoComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(191)))), ((int)(((byte)(202)))));
+            this.serv_tempoComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.serv_tempoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "serv_tempo", true));
             this.serv_tempoComboBox.FormattingEnabled = true;
             this.serv_tempoComboBox.Items.AddRange(new object[] {
