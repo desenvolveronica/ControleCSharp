@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Controle_c_
 {
-    public partial class frmCadAgendamentos : Form
+    public partial class frmCadAgendamento : Form
     {
-        public frmCadAgendamentos()
+        public frmCadAgendamento()
         {
             InitializeComponent();
         }

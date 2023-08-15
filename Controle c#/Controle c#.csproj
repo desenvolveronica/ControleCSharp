@@ -82,6 +82,12 @@
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadAgendamento.Designer.cs">
+      <DependentUpon>frmCadAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadAgendamento.resx">
+      <DependentUpon>frmCadAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadAnimal.resx">
       <DependentUpon>frmCadAnimal.cs</DependentUpon>
