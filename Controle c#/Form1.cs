@@ -58,7 +58,7 @@ namespace Controle_c_
         {   //aplica a posição do eixo Y do botão ao panel seleção
             panelSelecao.Top = btnRacas.Top;
            
-            frmCadRacas racas = new frmCadRacas();
+            frmCadRaca racas = new frmCadRaca();
             racas.TopLevel = false;
             racas.Dock = DockStyle.Fill;
             PanelCentral.Controls.Clear();
@@ -68,7 +68,7 @@ namespace Controle_c_
         private void btnServicos_Click(object sender, EventArgs e)
         {   //aplica a posição do eixo Y do botão ao panel seleção
             panelSelecao.Top = btnServicos.Top;
-            frmCadServicos servicos = new frmCadServicos();
+            frmCadServico servicos = new frmCadServico();
             servicos.TopLevel = false;
             servicos.Dock = DockStyle.Fill;
             PanelCentral.Controls.Clear();

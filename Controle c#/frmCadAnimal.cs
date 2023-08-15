@@ -114,5 +114,11 @@ namespace Controle_c_
             animalBindingSource.CancelEdit();
             groupBox1.Enabled=false;
         }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            
+        
+        }
     }
 }

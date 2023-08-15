@@ -61,7 +61,7 @@
             this.clienteTableAdapter = new Controle_c_.masterDataSetTableAdapters.clienteTableAdapter();
             this.racaTableAdapter = new Controle_c_.masterDataSetTableAdapters.racaTableAdapter();
             this.animalBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnAdicionar = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -73,11 +73,11 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.animalBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             ani_codigoLabel = new System.Windows.Forms.Label();
             ani_nomeLabel = new System.Windows.Forms.Label();
             ani_sexoLabel = new System.Windows.Forms.Label();
@@ -193,6 +193,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.btnFoto_ani);
             this.groupBox1.Controls.Add(ani_codigoLabel);
             this.groupBox1.Controls.Add(this.ani_codigoLabel1);
@@ -390,7 +391,7 @@
             // 
             // animalBindingNavigator
             // 
-            this.animalBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.animalBindingNavigator.AddNewItem = this.btnAdicionar;
             this.animalBindingNavigator.BindingSource = this.animalBindingSource;
             this.animalBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.animalBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -405,7 +406,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
+            this.btnAdicionar,
             this.bindingNavigatorDeleteItem,
             this.animalBindingNavigatorSaveItem,
             this.btnEditar,
@@ -421,14 +422,15 @@
             this.animalBindingNavigator.TabIndex = 1;
             this.animalBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // btnAdicionar
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.btnAdicionar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.RightToLeftAutoMirrorImage = true;
+            this.btnAdicionar.Size = new System.Drawing.Size(34, 34);
+            this.btnAdicionar.Text = "Adicionar novo";
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -517,21 +519,6 @@
             this.animalBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.animalBindingNavigatorSaveItem.Click += new System.EventHandler(this.animalBindingNavigatorSaveItem_Click);
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.masterDataSet;
-            // 
-            // clienteBindingSource1
-            // 
-            this.clienteBindingSource1.DataMember = "cliente";
-            this.clienteBindingSource1.DataSource = this.masterDataSet;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Title = "Escolha a foto do seu pet";
-            // 
             // btnEditar
             // 
             this.btnEditar.BackgroundImage = global::Controle_c_.Properties.Resources.editar_texto;
@@ -551,11 +538,26 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "cliente";
+            this.clienteBindingSource.DataSource = this.masterDataSet;
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataMember = "cliente";
+            this.clienteBindingSource1.DataSource = this.masterDataSet;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Title = "Escolha a foto do seu pet";
+            // 
             // frmCadAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1604, 881);
             this.Controls.Add(this.animalBindingNavigator);
             this.Controls.Add(this.groupBox1);
@@ -590,7 +592,7 @@
         private masterDataSetTableAdapters.animalTableAdapter animalTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator animalBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton btnAdicionar;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
