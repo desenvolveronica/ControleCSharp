@@ -64,6 +64,9 @@ namespace Controle_c_
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             ag_situacaoComboBox.Text = "AGENDADO";
+            ag_dataMaskedTextBox.Text = DateTime.Now.ToShortDateString();
+            ag_horarioMaskedTextBox.Text = DateTime.Now.ToShortTimeString();
+            ag_totalTextBox.Text = "0,00";
             groupBox1.Enabled = true;
 
         }
