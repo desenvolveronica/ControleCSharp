@@ -35,9 +35,17 @@ namespace Controle_c_
 
         private void agendamentoBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
         {
-            this.Validate();
-            this.agendamentoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+            try
+            {
+                this.Validate();
+                this.agendamentoBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.masterDataSet);
+                MessageBox.Show("Salvo com sucesso");
+            }
+            catch (Exception)
+            { //captura o erro
+                MessageBox.Show("Ocorreu um erro, verifique os valores informados");
+            }
 
         }
 
