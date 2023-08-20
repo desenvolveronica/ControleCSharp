@@ -143,6 +143,16 @@ namespace Controle_c_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancelar1 {
+            get {
+                object obj = ResourceManager.GetObject("cancelar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap editar_texto {
             get {
                 object obj = ResourceManager.GetObject("editar-texto", resourceCulture);
@@ -156,6 +166,16 @@ namespace Controle_c_.Properties {
         internal static System.Drawing.Bitmap editar_texto1 {
             get {
                 object obj = ResourceManager.GetObject("editar-texto1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar_texto2 {
+            get {
+                object obj = ResourceManager.GetObject("editar-texto2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +256,16 @@ namespace Controle_c_.Properties {
         internal static System.Drawing.Bitmap salvar_arquivo {
             get {
                 object obj = ResourceManager.GetObject("salvar-arquivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salvar_arquivo1 {
+            get {
+                object obj = ResourceManager.GetObject("salvar-arquivo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

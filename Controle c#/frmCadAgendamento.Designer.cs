@@ -33,8 +33,8 @@
             System.Windows.Forms.Label ag_dataLabel;
             System.Windows.Forms.Label ag_horarioLabel;
             System.Windows.Forms.Label ag_animalLabel;
-            System.Windows.Forms.Label ag_totalLabel;
             System.Windows.Forms.Label ag_situacaoLabel;
+            System.Windows.Forms.Label ag_totalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,14 +65,16 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.agendamentoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.agendamentoservicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ag_codigoLabel = new System.Windows.Forms.Label();
             ag_dataLabel = new System.Windows.Forms.Label();
             ag_horarioLabel = new System.Windows.Forms.Label();
             ag_animalLabel = new System.Windows.Forms.Label();
-            ag_totalLabel = new System.Windows.Forms.Label();
             ag_situacaoLabel = new System.Windows.Forms.Label();
+            ag_totalLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
@@ -120,15 +122,6 @@
             ag_animalLabel.TabIndex = 8;
             ag_animalLabel.Text = "Nome:";
             // 
-            // ag_totalLabel
-            // 
-            ag_totalLabel.AutoSize = true;
-            ag_totalLabel.Location = new System.Drawing.Point(353, 135);
-            ag_totalLabel.Name = "ag_totalLabel";
-            ag_totalLabel.Size = new System.Drawing.Size(48, 20);
-            ag_totalLabel.TabIndex = 10;
-            ag_totalLabel.Text = "Total:";
-            // 
             // ag_situacaoLabel
             // 
             ag_situacaoLabel.AutoSize = true;
@@ -137,6 +130,15 @@
             ag_situacaoLabel.Size = new System.Drawing.Size(76, 20);
             ag_situacaoLabel.TabIndex = 11;
             ag_situacaoLabel.Text = "Situação:";
+            // 
+            // ag_totalLabel
+            // 
+            ag_totalLabel.AutoSize = true;
+            ag_totalLabel.Location = new System.Drawing.Point(353, 135);
+            ag_totalLabel.Name = "ag_totalLabel";
+            ag_totalLabel.Size = new System.Drawing.Size(48, 20);
+            ag_totalLabel.TabIndex = 10;
+            ag_totalLabel.Text = "Total:";
             // 
             // groupBox1
             // 
@@ -153,7 +155,8 @@
             this.groupBox1.Controls.Add(this.ag_animalComboBox);
             this.groupBox1.Controls.Add(ag_totalLabel);
             this.groupBox1.Controls.Add(this.ag_totalTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(179, 66);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(81, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(819, 207);
             this.groupBox1.TabIndex = 0;
@@ -189,7 +192,8 @@
             this.ag_situacaoComboBox.Items.AddRange(new object[] {
             "INICIADO",
             "CONCLUIDO",
-            "PAUSADO"});
+            "PAUSADO",
+            "AGENDADO"});
             this.ag_situacaoComboBox.Location = new System.Drawing.Point(454, 40);
             this.ag_situacaoComboBox.Name = "ag_situacaoComboBox";
             this.ag_situacaoComboBox.Size = new System.Drawing.Size(180, 28);
@@ -234,7 +238,6 @@
             // ag_animalComboBox
             // 
             this.ag_animalComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ag_animalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "ag_animal", true));
             this.ag_animalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoBindingSource, "ag_animal", true));
             this.ag_animalComboBox.DataSource = this.animalBindingSource;
             this.ag_animalComboBox.DisplayMember = "ani_nome";
@@ -250,13 +253,14 @@
             this.ag_totalTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ag_totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "ag_total", true));
             this.ag_totalTextBox.Location = new System.Drawing.Point(454, 132);
+            this.ag_totalTextBox.Multiline = true;
             this.ag_totalTextBox.Name = "ag_totalTextBox";
             this.ag_totalTextBox.Size = new System.Drawing.Size(180, 26);
             this.ag_totalTextBox.TabIndex = 11;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(179, 317);
+            this.groupBox2.Location = new System.Drawing.Point(81, 309);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(819, 147);
             this.groupBox2.TabIndex = 1;
@@ -304,7 +308,9 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.agendamentoBindingNavigatorSaveItem});
+            this.agendamentoBindingNavigatorSaveItem,
+            this.btnCancelar,
+            this.btnEditar});
             this.agendamentoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.agendamentoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.agendamentoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -324,6 +330,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -340,6 +347,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -405,11 +413,33 @@
             // agendamentoBindingNavigatorSaveItem
             // 
             this.agendamentoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.agendamentoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("agendamentoBindingNavigatorSaveItem.Image")));
+            this.agendamentoBindingNavigatorSaveItem.Image = global::Controle_c_.Properties.Resources.salvar_arquivo1;
             this.agendamentoBindingNavigatorSaveItem.Name = "agendamentoBindingNavigatorSaveItem";
             this.agendamentoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.agendamentoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.agendamentoBindingNavigatorSaveItem.Click += new System.EventHandler(this.agendamentoBindingNavigatorSaveItem_Click_2);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCancelar.Image = global::Controle_c_.Properties.Resources.cancelar1;
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(23, 22);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEditar.Image = global::Controle_c_.Properties.Resources.editar_texto2;
+            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(23, 22);
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // agendamentoservicosBindingSource
             // 
@@ -478,7 +508,6 @@
         private System.Windows.Forms.MaskedTextBox ag_dataMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox ag_horarioMaskedTextBox;
         private System.Windows.Forms.ComboBox ag_animalComboBox;
-        private System.Windows.Forms.TextBox ag_totalTextBox;
         private System.Windows.Forms.ComboBox ag_situacaoComboBox;
         private masterDataSetTableAdapters.agendamento_servicosTableAdapter agendamento_servicosTableAdapter;
         private System.Windows.Forms.BindingSource agendamentoservicosBindingSource;
@@ -486,5 +515,8 @@
         private masterDataSetTableAdapters.animalTableAdapter animalTableAdapter;
         private System.Windows.Forms.BindingSource animalBindingSource;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox ag_totalTextBox;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStripButton btnEditar;
     }
 }

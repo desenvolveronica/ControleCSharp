@@ -243,5 +243,14 @@
   <ItemGroup>
     <None Include="Resources\proximo1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar-arquivo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-texto2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

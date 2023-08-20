@@ -37,9 +37,10 @@ namespace Controle_c_
         {
             try
             {
-                this.Validate();
-                this.agendamentoBindingSource.EndEdit();
+                this.Validate();//VALIDA OS DADOS
+                this.agendamentoBindingSource.EndEdit();//FINALIZA EDIÇÃO
                 this.tableAdapterManager.UpdateAll(this.masterDataSet);
+                groupBox1.Enabled = false;
                 MessageBox.Show("Salvo com sucesso");
             }
             catch (Exception)
@@ -58,6 +59,44 @@ namespace Controle_c_
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.agendamento'. Você pode movê-la ou removê-la conforme necessário.
             this.agendamentoTableAdapter.Fill(this.masterDataSet.agendamento);
 
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            ag_situacaoComboBox.Text = "AGENDADO";
+            groupBox1.Enabled = true;
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            agendamentoBindingSource.CancelEdit();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Você quer mesmo excluir este registro?", "PetShop2023", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    agendamentoBindingSource.RemoveCurrent(); //removeu 
+                    agendamentoTableAdapter.Update(masterDataSet.agendamento); //salva
+                    MessageBox.Show("Excluido com sucesso!");
+                }
+
+            }
+            catch (Exception) //captura o erro
+            {   //erro pode acontecer caso tentemos excluir um dado que está sendo usado em outra parte do código
+                //exemplo: usuário que tem registro de pet 
+                agendamentoTableAdapter.Fill(masterDataSet.agendamento); //coloca os dados novamente pois removeu de forma temporária
+                MessageBox.Show("Registro não pode ser excluído");
+            }
         }
     }
 }
