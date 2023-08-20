@@ -235,7 +235,7 @@
             // 
             this.ag_animalComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ag_animalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "ag_animal", true));
-            this.ag_animalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoBindingSource, "ag_total", true));
+            this.ag_animalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoBindingSource, "ag_animal", true));
             this.ag_animalComboBox.DataSource = this.animalBindingSource;
             this.ag_animalComboBox.DisplayMember = "ani_nome";
             this.ag_animalComboBox.FormattingEnabled = true;
