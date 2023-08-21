@@ -493,6 +493,7 @@
             this.view_ServicosAgendamentoDataGridView.Location = new System.Drawing.Point(6, 47);
             this.view_ServicosAgendamentoDataGridView.Name = "view_ServicosAgendamentoDataGridView";
             this.view_ServicosAgendamentoDataGridView.ReadOnly = true;
+            this.view_ServicosAgendamentoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.view_ServicosAgendamentoDataGridView.Size = new System.Drawing.Size(824, 183);
             this.view_ServicosAgendamentoDataGridView.TabIndex = 0;
             // 
