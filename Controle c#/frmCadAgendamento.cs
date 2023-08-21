@@ -88,8 +88,8 @@ namespace Controle_c_
             {
                 if (MessageBox.Show("Você quer mesmo excluir este registro?", "PetShop2023", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    agendamentoBindingSource.RemoveCurrent(); //removeu 
                     agendamentoTableAdapter.Update(masterDataSet.agendamento); //salva
+                    agendamentoBindingSource.RemoveCurrent(); //removeu 
                     MessageBox.Show("Excluido com sucesso!");
                 }
 
