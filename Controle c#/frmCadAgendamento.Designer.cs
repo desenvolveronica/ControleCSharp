@@ -493,7 +493,7 @@
             this.view_ServicosAgendamentoDataGridView.Location = new System.Drawing.Point(6, 47);
             this.view_ServicosAgendamentoDataGridView.Name = "view_ServicosAgendamentoDataGridView";
             this.view_ServicosAgendamentoDataGridView.ReadOnly = true;
-            this.view_ServicosAgendamentoDataGridView.Size = new System.Drawing.Size(824, 220);
+            this.view_ServicosAgendamentoDataGridView.Size = new System.Drawing.Size(824, 183);
             this.view_ServicosAgendamentoDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -502,6 +502,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "ag_serv_numero";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 200;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -525,7 +526,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "serv_descricao";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 200;
+            this.dataGridViewTextBoxColumn4.Width = 220;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -533,7 +534,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "serv_tempo";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 50;
+            this.dataGridViewTextBoxColumn5.Width = 80;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -541,7 +542,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "ag_serv_quantidade";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 50;
+            this.dataGridViewTextBoxColumn6.Width = 80;
             // 
             // dataGridViewTextBoxColumn7
             // 
