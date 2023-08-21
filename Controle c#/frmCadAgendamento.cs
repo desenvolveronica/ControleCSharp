@@ -52,6 +52,8 @@ namespace Controle_c_
 
         private void frmCadAgendamento_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.servico'. Você pode movê-la ou removê-la conforme necessário.
+            this.servicoTableAdapter.Fill(this.masterDataSet.servico);
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_ServicosAgendamento'. Você pode movê-la ou removê-la conforme necessário.
             this.view_ServicosAgendamentoTableAdapter.Fill(this.masterDataSet.View_ServicosAgendamento);
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.animal'. Você pode movê-la ou removê-la conforme necessário.
@@ -103,5 +105,7 @@ namespace Controle_c_
                 MessageBox.Show("Registro não pode ser excluído");
             }
         }
+
+       
     }
 }
