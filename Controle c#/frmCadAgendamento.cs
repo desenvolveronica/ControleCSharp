@@ -106,6 +106,27 @@ namespace Controle_c_
             }
         }
 
-       
+        private void txtQtd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtValorUnit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodServ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodServ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtCodServ.Text != "")
+            {
+                MessageBox.Show("enter");
+            }
+        }
     }
 }
