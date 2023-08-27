@@ -4553,12 +4553,21 @@ SELECT ag_serv_numero, ag_serv_agendamento, ag_serv_servico, ag_serv_quantidade,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ag_serv_numero, ag_serv_agendamento, ag_serv_servico, ag_serv_quantidade, " +
                 "ag_serv_valor_unitario FROM dbo.agendamento_servicos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.InserirServico";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ag_serv_agendamento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ag_serv_servico", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ag_serv_quantidade", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ag_serv_valor_unitario", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 2, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4726,6 +4735,53 @@ SELECT ag_serv_numero, ag_serv_agendamento, ag_serv_servico, ag_serv_quantidade,
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(int ag_serv_agendamento, int ag_serv_servico, int ag_serv_quantidade, global::System.Nullable<decimal> ag_serv_valor_unitario, int Original_ag_serv_numero, int Original_ag_serv_agendamento, int Original_ag_serv_servico, int Original_ag_serv_quantidade, global::System.Nullable<decimal> Original_ag_serv_valor_unitario) {
             return this.Update(ag_serv_agendamento, ag_serv_servico, ag_serv_quantidade, ag_serv_valor_unitario, Original_ag_serv_numero, Original_ag_serv_agendamento, Original_ag_serv_servico, Original_ag_serv_quantidade, Original_ag_serv_valor_unitario, Original_ag_serv_numero);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InserirServico(global::System.Nullable<int> ag_serv_agendamento, global::System.Nullable<int> ag_serv_servico, global::System.Nullable<int> ag_serv_quantidade, global::System.Nullable<decimal> ag_serv_valor_unitario) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((ag_serv_agendamento.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(ag_serv_agendamento.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ag_serv_servico.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(ag_serv_servico.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((ag_serv_quantidade.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(ag_serv_quantidade.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((ag_serv_valor_unitario.HasValue == true)) {
+                command.Parameters[4].Value = ((decimal)(ag_serv_valor_unitario.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

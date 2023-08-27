@@ -138,9 +138,12 @@ namespace Controle_c_
                 if(servicoBindingSource.Count == 1) //encontrou 1 registro
                 {
                     //cria uma variável com todos os dados do registro encontrado
-                    DataRowView ServicoEncontrado = (DataRowView)servicoBindingSource.Current;
+                    DataRowView ServicoEncontrado = (DataRowView)servicoBindingSource.Current; //variavel do tipo array ou matriz
                     txtServico.Text = ServicoEncontrado["serv_descricao"].ToString();
                     txtValorUnit.Text = ServicoEncontrado["serv_preco"].ToString();
+                    txtQtd.Text = "1";
+                    txtQtd.SelectAll();
+                    txtQtd.Focus();
                 }
                 else  //abrir o cadastro pra ele localizar
                 {
@@ -150,6 +153,15 @@ namespace Controle_c_
                 }
                 MessageBox.Show("enter");
             }
+        }
+
+        private void btnAddServ_Click(object sender, EventArgs e)
+        {
+            agendamento_servicosTableAdapter.InserirServico(int.Parse(ag_codigoTextBox.Text), int.Parse(txtCodServ.Text),
+                int.Parse(txtQtd.Text),decimal.Parse(txtValorUnit.Text));
+            //limpar tudo 
+             
+            //atualizar a grid
         }
     }
 }
