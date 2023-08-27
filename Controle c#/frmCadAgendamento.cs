@@ -41,7 +41,8 @@ namespace Controle_c_
                 this.agendamentoBindingSource.EndEdit();//FINALIZA EDIÇÃO
                 this.tableAdapterManager.UpdateAll(this.masterDataSet);
                 groupBox1.Enabled = false;
-                MessageBox.Show("Salvo com sucesso");
+                MessageBox.Show("Agendamento salvo, insira o serviço abaixo", "PetShop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCodServ.Focus();
             }
             catch (Exception)
             { //captura o erro
@@ -106,20 +107,7 @@ namespace Controle_c_
             }
         }
 
-        private void txtQtd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtValorUnit_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodServ_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void txtCodServ_KeyDown(object sender, KeyEventArgs e)
         {
@@ -157,12 +145,25 @@ namespace Controle_c_
 
         private void btnAddServ_Click(object sender, EventArgs e)
         {
-            agendamento_servicosTableAdapter.InserirServico(int.Parse(ag_codigoTextBox.Text), int.Parse(txtCodServ.Text),
-                int.Parse(txtQtd.Text),decimal.Parse(txtValorUnit.Text));
-            //limpar tudo 
+            try
+            {
+                agendamento_servicosTableAdapter.InserirServico(int.Parse(ag_codigoTextBox.Text), int.Parse(txtCodServ.Text),
+               int.Parse(txtQtd.Text), decimal.Parse(txtValorUnit.Text));
+                //atualizar a grid
+                Atualizar_grid();
+                //limpar tudo 
+                ag_codigoTextBox.Clear();
+                txtCodServ.Clear();
+                txtQtd.Clear();
+                txtValorUnit.Clear();
+                txtServico.Clear();
+                txtCodServ.Focus();
+            } catch (Exception)
+            {
+                MessageBox.Show("Tente Novamente");
+            }
 
-            //atualizar a grid
-            Atualizar_grid();
+
         }
 
         private void Atualizar_grid()
@@ -186,6 +187,34 @@ namespace Controle_c_
         private void ag_codigoTextBox_TextChanged(object sender, EventArgs e)
         {
             Atualizar_grid();
+        }
+
+        private void txtServico_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQtd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtQtd.Text != "")
+            {
+                txtValorUnit.SelectAll();
+                txtValorUnit.Focus();
+            }
+        }
+
+        private void txtValorUnit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtValorUnit.Text != "")
+            {
+                btnAddServ_Click(sender, e); //sender e (e) sao valores que tem de referêmcia para o objeto
+                //todo objeto precisa desses parâmetros que são argumentos que ele utiliza para funcionar
+            }
+        }
+
+        private void txtCodServ_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

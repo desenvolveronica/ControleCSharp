@@ -35,8 +35,8 @@
             System.Windows.Forms.Label ag_animalLabel;
             System.Windows.Forms.Label ag_situacaoLabel;
             System.Windows.Forms.Label ag_totalLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -348,7 +348,7 @@
             this.txtValorUnit.Name = "txtValorUnit";
             this.txtValorUnit.Size = new System.Drawing.Size(169, 26);
             this.txtValorUnit.TabIndex = 5;
-            this.txtValorUnit.TextChanged += new System.EventHandler(this.txtValorUnit_TextChanged);
+            this.txtValorUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValorUnit_KeyDown);
             // 
             // btnAddServ
             // 
@@ -372,7 +372,7 @@
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(169, 26);
             this.txtQtd.TabIndex = 2;
-            this.txtQtd.TextChanged += new System.EventHandler(this.txtQtd_TextChanged);
+            this.txtQtd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQtd_KeyDown);
             // 
             // view_ServicosAgendamentoDataGridView
             // 
@@ -452,9 +452,9 @@
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ag_serv_valor_unitario";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Format = "C2";
+            dataGridViewCellStyle13.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor unitário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -463,9 +463,9 @@
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Format = "C2";
+            dataGridViewCellStyle14.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTextBoxColumn8.HeaderText = "Subtotal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -674,6 +674,7 @@
             this.txtServico.Name = "txtServico";
             this.txtServico.Size = new System.Drawing.Size(212, 26);
             this.txtServico.TabIndex = 10;
+            this.txtServico.TextChanged += new System.EventHandler(this.txtServico_TextChanged);
             // 
             // txtCodServ
             // 
@@ -683,6 +684,7 @@
             this.txtCodServ.Size = new System.Drawing.Size(115, 26);
             this.txtCodServ.TabIndex = 11;
             this.txtCodServ.ValidatingType = typeof(int);
+            this.txtCodServ.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCodServ_MaskInputRejected);
             this.txtCodServ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodServ_KeyDown_1);
             // 
             // frmCadAgendamento
