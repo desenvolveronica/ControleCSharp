@@ -35,8 +35,8 @@
             System.Windows.Forms.Label ag_animalLabel;
             System.Windows.Forms.Label ag_situacaoLabel;
             System.Windows.Forms.Label ag_totalLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,7 +58,6 @@
             this.btnAddServ = new System.Windows.Forms.Button();
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtQtd = new System.Windows.Forms.TextBox();
-            this.txtCodServ = new System.Windows.Forms.TextBox();
             this.view_ServicosAgendamentoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +92,7 @@
             this.view_ServicosAgendamentoTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_ServicosAgendamentoTableAdapter();
             this.servicoTableAdapter = new Controle_c_.masterDataSetTableAdapters.servicoTableAdapter();
             this.txtServico = new System.Windows.Forms.TextBox();
+            this.txtCodServ = new System.Windows.Forms.MaskedTextBox();
             ag_codigoLabel = new System.Windows.Forms.Label();
             ag_dataLabel = new System.Windows.Forms.Label();
             ag_horarioLabel = new System.Windows.Forms.Label();
@@ -288,6 +288,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtCodServ);
             this.groupBox2.Controls.Add(this.txtServico);
             this.groupBox2.Controls.Add(this.lblValor);
             this.groupBox2.Controls.Add(this.lblQtd);
@@ -296,7 +297,6 @@
             this.groupBox2.Controls.Add(this.txtValorUnit);
             this.groupBox2.Controls.Add(this.btnAddServ);
             this.groupBox2.Controls.Add(this.txtQtd);
-            this.groupBox2.Controls.Add(this.txtCodServ);
             this.groupBox2.Controls.Add(this.view_ServicosAgendamentoDataGridView);
             this.groupBox2.Location = new System.Drawing.Point(81, 302);
             this.groupBox2.Name = "groupBox2";
@@ -371,15 +371,6 @@
             this.txtQtd.Size = new System.Drawing.Size(169, 26);
             this.txtQtd.TabIndex = 2;
             this.txtQtd.TextChanged += new System.EventHandler(this.txtQtd_TextChanged);
-            // 
-            // txtCodServ
-            // 
-            this.txtCodServ.Location = new System.Drawing.Point(20, 60);
-            this.txtCodServ.Name = "txtCodServ";
-            this.txtCodServ.Size = new System.Drawing.Size(125, 26);
-            this.txtCodServ.TabIndex = 1;
-            this.txtCodServ.TextChanged += new System.EventHandler(this.txtCodServ_TextChanged);
-            this.txtCodServ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodServ_KeyDown);
             // 
             // view_ServicosAgendamentoDataGridView
             // 
@@ -459,9 +450,9 @@
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ag_serv_valor_unitario";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor unitário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -470,9 +461,9 @@
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn8.HeaderText = "Subtotal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -682,6 +673,16 @@
             this.txtServico.Size = new System.Drawing.Size(212, 26);
             this.txtServico.TabIndex = 10;
             // 
+            // txtCodServ
+            // 
+            this.txtCodServ.Location = new System.Drawing.Point(33, 57);
+            this.txtCodServ.Mask = "000";
+            this.txtCodServ.Name = "txtCodServ";
+            this.txtCodServ.Size = new System.Drawing.Size(115, 26);
+            this.txtCodServ.TabIndex = 11;
+            this.txtCodServ.ValidatingType = typeof(int);
+            this.txtCodServ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodServ_KeyDown_1);
+            // 
             // frmCadAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -766,7 +767,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.TextBox txtQtd;
-        private System.Windows.Forms.TextBox txtCodServ;
         private System.Windows.Forms.Label lblCódigo;
         private System.Windows.Forms.TextBox txtValorUnit;
         private System.Windows.Forms.Button btnAddServ;
@@ -776,5 +776,6 @@
         private System.Windows.Forms.BindingSource servicoBindingSource;
         private masterDataSetTableAdapters.servicoTableAdapter servicoTableAdapter;
         private System.Windows.Forms.TextBox txtServico;
+        private System.Windows.Forms.MaskedTextBox txtCodServ;
     }
 }

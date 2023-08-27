@@ -128,5 +128,28 @@ namespace Controle_c_
                 MessageBox.Show("enter");
             }
         }
+
+        private void txtCodServ_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtCodServ.Text != "")
+            {
+                servicoBindingSource.MoveFirst(); //moveu para o primeiro registro
+                servicoBindingSource.Filter = "serv_codigo = " + txtCodServ.Text;
+                if(servicoBindingSource.Count == 1) //encontrou 1 registro
+                {
+                    //cria uma variável com todos os dados do registro encontrado
+                    DataRowView ServicoEncontrado = (DataRowView)servicoBindingSource.Current;
+                    txtServico.Text = ServicoEncontrado["serv_descricao"].ToString();
+                    txtValorUnit.Text = ServicoEncontrado["serv_preco"].ToString();
+                }
+                else  //abrir o cadastro pra ele localizar
+                {
+                    frmCadServico serv = new frmCadServico();
+                    serv.ShowDialog();
+                    //jogar os valores para as textBox
+                }
+                MessageBox.Show("enter");
+            }
+        }
     }
 }
