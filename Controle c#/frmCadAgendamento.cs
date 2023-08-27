@@ -151,7 +151,7 @@ namespace Controle_c_
                     serv.ShowDialog();
                     //jogar os valores para as textBox
                 }
-                MessageBox.Show("enter");
+               // MessageBox.Show("enter");
             }
         }
 
@@ -160,8 +160,32 @@ namespace Controle_c_
             agendamento_servicosTableAdapter.InserirServico(int.Parse(ag_codigoTextBox.Text), int.Parse(txtCodServ.Text),
                 int.Parse(txtQtd.Text),decimal.Parse(txtValorUnit.Text));
             //limpar tudo 
-             
+
             //atualizar a grid
+            Atualizar_grid();
+        }
+
+        private void Atualizar_grid()
+        {
+            try
+            {
+                if (ag_codigoTextBox.Text != "") //pesquisa
+                {
+                    //recarrega os dados
+                    view_ServicosAgendamentoTableAdapter.Fill(masterDataSet.View_ServicosAgendamento);
+                    //filtra pelo código do agendamento
+                    view_ServicosAgendamentoBindingSource.Filter = "ag_serv_agendamento =" + ag_codigoTextBox.Text;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void ag_codigoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Atualizar_grid();
         }
     }
 }
