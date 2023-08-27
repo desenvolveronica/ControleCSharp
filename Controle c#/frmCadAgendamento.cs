@@ -212,9 +212,18 @@ namespace Controle_c_
             }
         }
 
-        private void txtCodServ_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void view_ServicosAgendamentoDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                int Codigo = 0;
+                Codigo = int.Parse(view_ServicosAgendamentoDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
+                agendamento_servicosTableAdapter.RemoverServico(Codigo);
+            }catch (Exception)
+            { 
 
+            }
+            Atualizar_grid();
         }
     }
 }
