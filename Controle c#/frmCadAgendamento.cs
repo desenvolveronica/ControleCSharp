@@ -187,6 +187,7 @@ namespace Controle_c_
         private void ag_codigoTextBox_TextChanged(object sender, EventArgs e)
         {
             Atualizar_grid();
+            Finalizado();
         }
 
         private void txtServico_TextChanged(object sender, EventArgs e)
@@ -234,11 +235,36 @@ namespace Controle_c_
                 agendamentoTableAdapter.Update(masterDataSet.agendamento); //salva as alterações
                 MessageBox.Show("Agendamento finalizado com sucesso!", "PetShop", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //bloquear se estiver finalizado
+                Finalizado();
             }
 
 
         }
+        private void Finalizado()
+        {
+            if (ag_situacaoComboBox.Text == "Finalizado")
+            {
+                agendamentoBindingNavigatorSaveItem.Enabled= false;
+                btnCancelar.Enabled= false;
+                btnEditar.Enabled= false;
+                btnFinalizar.Enabled= false;
+                bindingNavigatorDeleteItem.Enabled = false;
+                groupBox2.Enabled= false;
+            }
+            else
+            {
+                agendamentoBindingNavigatorSaveItem.Enabled = true;
+                btnCancelar.Enabled = true;
+                btnEditar.Enabled = true;
+                btnFinalizar.Enabled = true;
+                bindingNavigatorDeleteItem.Enabled = true;
+                groupBox2.Enabled = true;
+            }
+        }
 
-        
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
