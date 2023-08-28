@@ -262,9 +262,9 @@ namespace Controle_c_
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void agendamentoservicosBindingSource_PositionChanged(object sender, EventArgs e)
         {
-
+            Finalizado();
         }
     }
 }
