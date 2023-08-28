@@ -110,6 +110,7 @@ namespace Controle_c_
                 agendamentoTableAdapter.Fill(masterDataSet.agendamento); //coloca os dados novamente pois removeu de forma temporária
                 MessageBox.Show("Registro não pode ser excluído");
             }
+            Total();
         }
 
       
@@ -167,8 +168,7 @@ namespace Controle_c_
             {
                 MessageBox.Show("Tente Novamente");
             }
-
-
+            Total();
         }
 
         private void Atualizar_grid()
@@ -269,7 +269,19 @@ namespace Controle_c_
         }
         private void Total()
         {
+            if (ag_codigoTextBox.Text != "")
+            {
+                view_TotalServicosBindingSource.Filter = "ag_serv_agendamento = " + ag_codigoTextBox.Text;
+                if (view_TotalServicosBindingSource.Count == 1)
+                {
+                    //pegar o total e jogar na textBox
+                    // DataRowView é uma variável do tipo linha de dados
+                    DataRowView Resultado = (DataRowView)view_TotalServicosBindingSource.Current;
+                    ag_totalTextBox.Text = Resultado["Total"].ToString();
+                    agendamentoTableAdapter.Update(masterDataSet.agendamento);
+                }
 
+            }
         }
     }
 }
