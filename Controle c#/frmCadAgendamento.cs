@@ -48,11 +48,16 @@ namespace Controle_c_
             { //captura o erro
                 MessageBox.Show("Ocorreu um erro, verifique os valores informados");
             }
+            Finalizado();
 
         }
 
         private void frmCadAgendamento_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_TotalServicos'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_TotalServicosTableAdapter.Fill(this.masterDataSet.View_TotalServicos);
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_TotalServicos'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_TotalServicosTableAdapter.Fill(this.masterDataSet.View_TotalServicos);
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.servico'. Você pode movê-la ou removê-la conforme necessário.
             this.servicoTableAdapter.Fill(this.masterDataSet.servico);
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_ServicosAgendamento'. Você pode movê-la ou removê-la conforme necessário.
@@ -190,10 +195,6 @@ namespace Controle_c_
             Finalizado();
         }
 
-        private void txtServico_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtQtd_KeyDown(object sender, KeyEventArgs e)
         {
@@ -265,6 +266,10 @@ namespace Controle_c_
         private void agendamentoservicosBindingSource_PositionChanged(object sender, EventArgs e)
         {
             Finalizado();
+        }
+        private void Total()
+        {
+
         }
     }
 }

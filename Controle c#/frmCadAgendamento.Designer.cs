@@ -94,6 +94,8 @@
             this.agendamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.view_ServicosAgendamentoTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_ServicosAgendamentoTableAdapter();
             this.servicoTableAdapter = new Controle_c_.masterDataSetTableAdapters.servicoTableAdapter();
+            this.view_TotalServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_TotalServicosTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_TotalServicosTableAdapter();
             ag_codigoLabel = new System.Windows.Forms.Label();
             ag_dataLabel = new System.Windows.Forms.Label();
             ag_horarioLabel = new System.Windows.Forms.Label();
@@ -113,6 +115,7 @@
             this.agendamentoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoservicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_TotalServicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ag_codigoLabel
@@ -187,7 +190,7 @@
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(81, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(835, 207);
+            this.groupBox1.Size = new System.Drawing.Size(835, 343);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Agendamento";
@@ -322,7 +325,6 @@
             this.txtServico.Name = "txtServico";
             this.txtServico.Size = new System.Drawing.Size(212, 26);
             this.txtServico.TabIndex = 10;
-            this.txtServico.TextChanged += new System.EventHandler(this.txtServico_TextChanged);
             // 
             // lblValor
             // 
@@ -698,6 +700,15 @@
             // 
             this.servicoTableAdapter.ClearBeforeFill = true;
             // 
+            // view_TotalServicosBindingSource
+            // 
+            this.view_TotalServicosBindingSource.DataMember = "View_TotalServicos";
+            this.view_TotalServicosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // view_TotalServicosTableAdapter
+            // 
+            this.view_TotalServicosTableAdapter.ClearBeforeFill = true;
+            // 
             // frmCadAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -730,6 +741,7 @@
             this.agendamentoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoservicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_TotalServicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,5 +805,7 @@
         private System.Windows.Forms.TextBox txtServico;
         private System.Windows.Forms.MaskedTextBox txtCodServ;
         private System.Windows.Forms.ToolStripButton btnFinalizar;
+        private System.Windows.Forms.BindingSource view_TotalServicosBindingSource;
+        private masterDataSetTableAdapters.View_TotalServicosTableAdapter view_TotalServicosTableAdapter;
     }
 }
