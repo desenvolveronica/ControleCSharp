@@ -35,8 +35,8 @@
             System.Windows.Forms.Label ag_animalLabel;
             System.Windows.Forms.Label ag_situacaoLabel;
             System.Windows.Forms.Label ag_totalLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -89,6 +89,7 @@
             this.agendamentoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnFinalizar = new System.Windows.Forms.ToolStripButton();
             this.agendamentoservicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.view_ServicosAgendamentoTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_ServicosAgendamentoTableAdapter();
@@ -218,10 +219,9 @@
             this.ag_situacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "ag_situacao", true));
             this.ag_situacaoComboBox.FormattingEnabled = true;
             this.ag_situacaoComboBox.Items.AddRange(new object[] {
-            "INICIADO",
-            "CONCLUIDO",
-            "PAUSADO",
-            "AGENDADO"});
+            "Agendado",
+            "Em Andamento",
+            "Finalizado"});
             this.ag_situacaoComboBox.Location = new System.Drawing.Point(454, 40);
             this.ag_situacaoComboBox.Name = "ag_situacaoComboBox";
             this.ag_situacaoComboBox.Size = new System.Drawing.Size(180, 28);
@@ -466,9 +466,9 @@
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ag_serv_valor_unitario";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor unitário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -477,9 +477,9 @@
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn8.HeaderText = "Subtotal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -538,7 +538,8 @@
             this.bindingNavigatorDeleteItem,
             this.agendamentoBindingNavigatorSaveItem,
             this.btnCancelar,
-            this.btnEditar});
+            this.btnEditar,
+            this.btnFinalizar});
             this.agendamentoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.agendamentoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.agendamentoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -669,6 +670,15 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalizar.Image")));
+            this.btnFinalizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(70, 22);
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
             // agendamentoservicosBindingSource
             // 
             this.agendamentoservicosBindingSource.DataMember = "agendamento_servicos";
@@ -781,5 +791,6 @@
         private masterDataSetTableAdapters.servicoTableAdapter servicoTableAdapter;
         private System.Windows.Forms.TextBox txtServico;
         private System.Windows.Forms.MaskedTextBox txtCodServ;
+        private System.Windows.Forms.ToolStripButton btnFinalizar;
     }
 }

@@ -225,5 +225,20 @@ namespace Controle_c_
             }
             Atualizar_grid();
         }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Após finalizado o agendamento não poderá ser alterado", "PetShop", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ag_situacaoComboBox.Text = "Finalizado"; //muda o text da combobox
+                agendamentoTableAdapter.Update(masterDataSet.agendamento); //salva as alterações
+                MessageBox.Show("Agendamento finalizado com sucesso!", "PetShop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //bloquear se estiver finalizado
+            }
+
+
+        }
+
+        
     }
 }
