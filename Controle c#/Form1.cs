@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controle_c_.masterDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,6 +87,7 @@ namespace Controle_c_
             PanelCentral.Controls.Clear();
             PanelCentral.Controls.Add(agendamento);
             agendamento.Show();
+            
         }
 
 

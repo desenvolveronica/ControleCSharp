@@ -270,10 +270,8 @@ namespace Controle_c_
 
         private void Total()
         {
-            view_TotalServicosTableAdapter.Fill(masterDataSet.View_TotalServicos);//recarregar os dados
-            view_ServicosAgendamentoTableAdapter.Fill(masterDataSet.View_ServicosAgendamento);
            
-            if (ag_codigoTextBox.Text != " ")
+            if (ag_codigoTextBox.Text != "")
             {
                 view_TotalServicosTableAdapter.Fill(masterDataSet.View_TotalServicos);
                 view_TotalServicosBindingSource.Filter = "ag_serv_agendamento = " + ag_codigoTextBox.Text;
@@ -283,6 +281,11 @@ namespace Controle_c_
                     // DataRowView é uma variável do tipo linha de dados
                     DataRowView Resultado = (DataRowView)view_TotalServicosBindingSource.Current;
                     ag_totalTextBox.Text = Resultado["Total"].ToString();
+                    agendamentoTableAdapter.Update(masterDataSet.agendamento);
+                }
+                else
+                {   //se não tiver itens(servicos) o total é = 0,00
+                    ag_totalTextBox.Text = "0.00";
                     agendamentoTableAdapter.Update(masterDataSet.agendamento);
                 }
 
