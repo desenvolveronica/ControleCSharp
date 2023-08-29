@@ -35,8 +35,8 @@
             System.Windows.Forms.Label ag_situacaoLabel;
             System.Windows.Forms.Label ag_totalLabel;
             System.Windows.Forms.Label ag_codigoLabel1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ag_codigoTextBox = new System.Windows.Forms.Label();
@@ -187,6 +187,7 @@
             this.groupBox1.Controls.Add(this.ag_animalComboBox);
             this.groupBox1.Controls.Add(ag_totalLabel);
             this.groupBox1.Controls.Add(this.ag_totalTextBox);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(81, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(835, 343);
@@ -466,9 +467,9 @@
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ag_serv_valor_unitario";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor unitário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -477,9 +478,9 @@
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn8.HeaderText = "Subtotal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
