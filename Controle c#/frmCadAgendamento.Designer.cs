@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label ag_codigoLabel;
             System.Windows.Forms.Label ag_dataLabel;
             System.Windows.Forms.Label ag_horarioLabel;
             System.Windows.Forms.Label ag_animalLabel;
             System.Windows.Forms.Label ag_situacaoLabel;
             System.Windows.Forms.Label ag_totalLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label ag_codigoLabel1;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ag_codigoTextBox = new System.Windows.Forms.Label();
+            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet = new Controle_c_.masterDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masterDataSet = new Controle_c_.masterDataSet();
             this.ag_situacaoComboBox = new System.Windows.Forms.ComboBox();
-            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ag_codigoTextBox = new System.Windows.Forms.TextBox();
             this.ag_dataMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.ag_horarioMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.ag_animalComboBox = new System.Windows.Forms.ComboBox();
@@ -96,17 +96,17 @@
             this.servicoTableAdapter = new Controle_c_.masterDataSetTableAdapters.servicoTableAdapter();
             this.view_TotalServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_TotalServicosTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_TotalServicosTableAdapter();
-            ag_codigoLabel = new System.Windows.Forms.Label();
             ag_dataLabel = new System.Windows.Forms.Label();
             ag_horarioLabel = new System.Windows.Forms.Label();
             ag_animalLabel = new System.Windows.Forms.Label();
             ag_situacaoLabel = new System.Windows.Forms.Label();
             ag_totalLabel = new System.Windows.Forms.Label();
+            ag_codigoLabel1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_ServicosAgendamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_ServicosAgendamentoBindingSource)).BeginInit();
@@ -117,15 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_TotalServicosBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ag_codigoLabel
-            // 
-            ag_codigoLabel.AutoSize = true;
-            ag_codigoLabel.Location = new System.Drawing.Point(53, 46);
-            ag_codigoLabel.Name = "ag_codigoLabel";
-            ag_codigoLabel.Size = new System.Drawing.Size(63, 20);
-            ag_codigoLabel.TabIndex = 0;
-            ag_codigoLabel.Text = "Código:";
             // 
             // ag_dataLabel
             // 
@@ -172,13 +163,22 @@
             ag_totalLabel.TabIndex = 10;
             ag_totalLabel.Text = "Total:";
             // 
+            // ag_codigoLabel1
+            // 
+            ag_codigoLabel1.AutoSize = true;
+            ag_codigoLabel1.Location = new System.Drawing.Point(53, 51);
+            ag_codigoLabel1.Name = "ag_codigoLabel1";
+            ag_codigoLabel1.Size = new System.Drawing.Size(63, 20);
+            ag_codigoLabel1.TabIndex = 13;
+            ag_codigoLabel1.Text = "Código:";
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(ag_codigoLabel1);
+            this.groupBox1.Controls.Add(this.ag_codigoTextBox);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(ag_situacaoLabel);
             this.groupBox1.Controls.Add(this.ag_situacaoComboBox);
-            this.groupBox1.Controls.Add(ag_codigoLabel);
-            this.groupBox1.Controls.Add(this.ag_codigoTextBox);
             this.groupBox1.Controls.Add(ag_dataLabel);
             this.groupBox1.Controls.Add(this.ag_dataMaskedTextBox);
             this.groupBox1.Controls.Add(ag_horarioLabel);
@@ -193,6 +193,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Agendamento";
+            // 
+            // ag_codigoTextBox
+            // 
+            this.ag_codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "ag_codigo", true));
+            this.ag_codigoTextBox.Location = new System.Drawing.Point(150, 48);
+            this.ag_codigoTextBox.Name = "ag_codigoTextBox";
+            this.ag_codigoTextBox.Size = new System.Drawing.Size(100, 23);
+            this.ag_codigoTextBox.TabIndex = 14;
+            this.ag_codigoTextBox.Text = "label1";
+            // 
+            // agendamentoBindingSource
+            // 
+            this.agendamentoBindingSource.DataMember = "agendamento";
+            this.agendamentoBindingSource.DataSource = this.masterDataSet;
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
@@ -210,11 +229,6 @@
             this.animalBindingSource.DataMember = "animal";
             this.animalBindingSource.DataSource = this.masterDataSet;
             // 
-            // masterDataSet
-            // 
-            this.masterDataSet.DataSetName = "masterDataSet";
-            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // ag_situacaoComboBox
             // 
             this.ag_situacaoComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -228,22 +242,6 @@
             this.ag_situacaoComboBox.Name = "ag_situacaoComboBox";
             this.ag_situacaoComboBox.Size = new System.Drawing.Size(180, 28);
             this.ag_situacaoComboBox.TabIndex = 12;
-            // 
-            // agendamentoBindingSource
-            // 
-            this.agendamentoBindingSource.DataMember = "agendamento";
-            this.agendamentoBindingSource.DataSource = this.masterDataSet;
-            // 
-            // ag_codigoTextBox
-            // 
-            this.ag_codigoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ag_codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "ag_codigo", true));
-            this.ag_codigoTextBox.Enabled = false;
-            this.ag_codigoTextBox.Location = new System.Drawing.Point(154, 43);
-            this.ag_codigoTextBox.Name = "ag_codigoTextBox";
-            this.ag_codigoTextBox.Size = new System.Drawing.Size(121, 26);
-            this.ag_codigoTextBox.TabIndex = 1;
-            this.ag_codigoTextBox.TextChanged += new System.EventHandler(this.ag_codigoTextBox_TextChanged);
             // 
             // ag_dataMaskedTextBox
             // 
@@ -468,9 +466,9 @@
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ag_serv_valor_unitario";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor unitário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -479,9 +477,9 @@
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn8.HeaderText = "Subtotal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -727,10 +725,10 @@
             this.Load += new System.EventHandler(this.frmCadAgendamento_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_ServicosAgendamentoDataGridView)).EndInit();
@@ -768,7 +766,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton agendamentoBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox ag_codigoTextBox;
         private System.Windows.Forms.MaskedTextBox ag_dataMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox ag_horarioMaskedTextBox;
         private System.Windows.Forms.ComboBox ag_animalComboBox;
@@ -807,5 +804,6 @@
         private System.Windows.Forms.ToolStripButton btnFinalizar;
         private System.Windows.Forms.BindingSource view_TotalServicosBindingSource;
         private masterDataSetTableAdapters.View_TotalServicosTableAdapter view_TotalServicosTableAdapter;
+        private System.Windows.Forms.Label ag_codigoTextBox;
     }
 }

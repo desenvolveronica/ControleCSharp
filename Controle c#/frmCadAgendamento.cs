@@ -158,7 +158,6 @@ namespace Controle_c_
                 //atualizar a grid
                 Atualizar_grid();
                 //limpar tudo 
-                ag_codigoTextBox.Clear();
                 txtCodServ.Clear();
                 txtQtd.Clear();
                 txtValorUnit.Clear();
@@ -273,12 +272,11 @@ namespace Controle_c_
         {
             view_TotalServicosTableAdapter.Fill(masterDataSet.View_TotalServicos);//recarregar os dados
             view_ServicosAgendamentoTableAdapter.Fill(masterDataSet.View_ServicosAgendamento);
-            string teste = ag_codigoTextBox.Text;
-            teste = "20";
+           
             if (ag_codigoTextBox.Text != " ")
             {
                 view_TotalServicosTableAdapter.Fill(masterDataSet.View_TotalServicos);
-                view_TotalServicosBindingSource.Filter = "ag_serv_agendamento = " + teste;
+                view_TotalServicosBindingSource.Filter = "ag_serv_agendamento = " + ag_codigoTextBox.Text;
                 if (view_TotalServicosBindingSource.Count == 1)
                 {
                     //pegar o total e jogar na textBox
@@ -290,5 +288,7 @@ namespace Controle_c_
 
             }
         }
+
+       
     }
 }
