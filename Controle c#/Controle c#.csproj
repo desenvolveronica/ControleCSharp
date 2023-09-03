@@ -112,6 +112,12 @@
     <Compile Include="frmCadServico.Designer.cs">
       <DependentUpon>frmCadServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLocalizarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalizarAnimal.Designer.cs">
+      <DependentUpon>frmLocalizarAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLocalizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadServico.resx">
       <DependentUpon>frmCadServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalizarAnimal.resx">
+      <DependentUpon>frmLocalizarAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLocalizarCliente.resx">
       <DependentUpon>frmLocalizarCliente.cs</DependentUpon>

@@ -478,6 +478,26 @@ SELECT serv_codigo, serv_descricao, serv_preco, serv_tempo FROM servico WHERE (s
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_AnimaisClientesTableAdapter" GeneratorDataComponentClassName="View_AnimaisClientesTableAdapter" Name="View_AnimaisClientes" UserDataComponentName="View_AnimaisClientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="masterConnectionString (Settings)" DbObjectName="master.dbo.View_AnimaisClientes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ani_codigo, ani_nome, ani_agressivo, ani_alergia, cli_nome FROM dbo.View_AnimaisClientes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ani_codigo" DataSetColumn="ani_codigo" />
+              <Mapping SourceColumn="ani_nome" DataSetColumn="ani_nome" />
+              <Mapping SourceColumn="ani_agressivo" DataSetColumn="ani_agressivo" />
+              <Mapping SourceColumn="ani_alergia" DataSetColumn="ani_alergia" />
+              <Mapping SourceColumn="cli_nome" DataSetColumn="cli_nome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -661,11 +681,46 @@ SELECT serv_codigo, serv_descricao, serv_preco, serv_tempo FROM servico WHERE (s
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_TotalServicos" msprop:Generator_RowEvHandlerName="View_TotalServicosRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TotalServicosRowDeleted" msprop:Generator_RowDeletingName="View_TotalServicosRowDeleting" msprop:Generator_RowEvArgName="View_TotalServicosRowChangeEvent" msprop:Generator_TablePropName="View_TotalServicos" msprop:Generator_RowChangedName="View_TotalServicosRowChanged" msprop:Generator_RowChangingName="View_TotalServicosRowChanging" msprop:Generator_TableClassName="View_TotalServicosDataTable" msprop:Generator_RowClassName="View_TotalServicosRow" msprop:Generator_TableVarName="tableView_TotalServicos" msprop:Generator_UserTableName="View_TotalServicos">
+        <xs:element name="View_TotalServicos" msprop:Generator_RowClassName="View_TotalServicosRow" msprop:Generator_RowEvHandlerName="View_TotalServicosRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TotalServicosRowDeleted" msprop:Generator_RowDeletingName="View_TotalServicosRowDeleting" msprop:Generator_RowEvArgName="View_TotalServicosRowChangeEvent" msprop:Generator_TablePropName="View_TotalServicos" msprop:Generator_RowChangedName="View_TotalServicosRowChanged" msprop:Generator_UserTableName="View_TotalServicos" msprop:Generator_RowChangingName="View_TotalServicosRowChanging" msprop:Generator_TableClassName="View_TotalServicosDataTable" msprop:Generator_TableVarName="tableView_TotalServicos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ag_serv_agendamento" msprop:Generator_ColumnPropNameInRow="ag_serv_agendamento" msprop:Generator_ColumnPropNameInTable="ag_serv_agendamentoColumn" msprop:Generator_ColumnVarNameInTable="columnag_serv_agendamento" msprop:Generator_UserColumnName="ag_serv_agendamento" type="xs:int" />
-              <xs:element name="Total" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ag_serv_agendamento" msprop:Generator_UserColumnName="ag_serv_agendamento" msprop:Generator_ColumnPropNameInTable="ag_serv_agendamentoColumn" msprop:Generator_ColumnPropNameInRow="ag_serv_agendamento" msprop:Generator_ColumnVarNameInTable="columnag_serv_agendamento" type="xs:int" />
+              <xs:element name="Total" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_AnimaisClientes" msprop:Generator_RowEvHandlerName="View_AnimaisClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="View_AnimaisClientesRowDeleted" msprop:Generator_RowDeletingName="View_AnimaisClientesRowDeleting" msprop:Generator_RowEvArgName="View_AnimaisClientesRowChangeEvent" msprop:Generator_TablePropName="View_AnimaisClientes" msprop:Generator_RowChangedName="View_AnimaisClientesRowChanged" msprop:Generator_RowChangingName="View_AnimaisClientesRowChanging" msprop:Generator_TableClassName="View_AnimaisClientesDataTable" msprop:Generator_RowClassName="View_AnimaisClientesRow" msprop:Generator_TableVarName="tableView_AnimaisClientes" msprop:Generator_UserTableName="View_AnimaisClientes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ani_codigo" msprop:Generator_ColumnPropNameInRow="ani_codigo" msprop:Generator_ColumnPropNameInTable="ani_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnani_codigo" msprop:Generator_UserColumnName="ani_codigo" type="xs:int" />
+              <xs:element name="ani_nome" msprop:Generator_ColumnPropNameInRow="ani_nome" msprop:Generator_ColumnPropNameInTable="ani_nomeColumn" msprop:Generator_ColumnVarNameInTable="columnani_nome" msprop:Generator_UserColumnName="ani_nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ani_agressivo" msprop:Generator_ColumnPropNameInRow="ani_agressivo" msprop:Generator_ColumnPropNameInTable="ani_agressivoColumn" msprop:Generator_ColumnVarNameInTable="columnani_agressivo" msprop:Generator_UserColumnName="ani_agressivo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ani_alergia" msprop:Generator_ColumnPropNameInRow="ani_alergia" msprop:Generator_ColumnPropNameInTable="ani_alergiaColumn" msprop:Generator_ColumnVarNameInTable="columnani_alergia" msprop:Generator_UserColumnName="ani_alergia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cli_nome" msprop:Generator_ColumnPropNameInRow="cli_nome" msprop:Generator_ColumnPropNameInTable="cli_nomeColumn" msprop:Generator_ColumnVarNameInTable="columncli_nome" msprop:Generator_UserColumnName="cli_nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -699,14 +754,18 @@ SELECT serv_codigo, serv_descricao, serv_preco, serv_tempo FROM servico WHERE (s
       <xs:selector xpath=".//mstns:View_ServicosAgendamento" />
       <xs:field xpath="mstns:ag_serv_numero" />
     </xs:unique>
+    <xs:unique name="View_AnimaisClientes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_AnimaisClientes" />
+      <xs:field xpath="mstns:ani_codigo" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__agendamen__ag_an__320C68B7" msdata:parent="animal" msdata:child="agendamento" msdata:parentkey="ani_codigo" msdata:childkey="ag_animal" msprop:Generator_UserParentTable="animal" msprop:Generator_UserChildTable="agendamento" msprop:Generator_RelationVarName="relationFK__agendamen__ag_an__320C68B7" msprop:Generator_ChildPropName="GetagendamentoRows" msprop:Generator_ParentPropName="animalRow" msprop:Generator_UserRelationName="FK__agendamen__ag_an__320C68B7" />
-      <msdata:Relationship name="FK__agendamen__ag_se__33008CF0" msdata:parent="servico" msdata:child="agendamento_servicos" msdata:parentkey="serv_codigo" msdata:childkey="ag_serv_servico" msprop:Generator_UserParentTable="servico" msprop:Generator_UserChildTable="agendamento_servicos" msprop:Generator_RelationVarName="relationFK__agendamen__ag_se__33008CF0" msprop:Generator_ChildPropName="Getagendamento_servicosRows" msprop:Generator_ParentPropName="servicoRow" msprop:Generator_UserRelationName="FK__agendamen__ag_se__33008CF0" />
-      <msdata:Relationship name="FK__agendamen__ag_se__33F4B129" msdata:parent="agendamento" msdata:child="agendamento_servicos" msdata:parentkey="ag_codigo" msdata:childkey="ag_serv_agendamento" msprop:Generator_UserParentTable="agendamento" msprop:Generator_UserChildTable="agendamento_servicos" msprop:Generator_RelationVarName="relationFK__agendamen__ag_se__33F4B129" msprop:Generator_ChildPropName="Getagendamento_servicosRows" msprop:Generator_UserRelationName="FK__agendamen__ag_se__33F4B129" msprop:Generator_ParentPropName="agendamentoRow" />
-      <msdata:Relationship name="FK__animal__ani_clie__30242045" msdata:parent="cliente" msdata:child="animal" msdata:parentkey="cli_codigo" msdata:childkey="ani_cliente" msprop:Generator_UserParentTable="cliente" msprop:Generator_UserChildTable="animal" msprop:Generator_RelationVarName="relationFK__animal__ani_clie__30242045" msprop:Generator_ChildPropName="GetanimalRows" msprop:Generator_ParentPropName="clienteRow" msprop:Generator_UserRelationName="FK__animal__ani_clie__30242045" />
-      <msdata:Relationship name="FK__animal__ani_raca__3118447E" msdata:parent="raca" msdata:child="animal" msdata:parentkey="raca_codigo" msdata:childkey="ani_raca" msprop:Generator_UserParentTable="raca" msprop:Generator_UserChildTable="animal" msprop:Generator_RelationVarName="relationFK__animal__ani_raca__3118447E" msprop:Generator_ChildPropName="GetanimalRows" msprop:Generator_ParentPropName="racaRow" msprop:Generator_UserRelationName="FK__animal__ani_raca__3118447E" />
+      <msdata:Relationship name="FK__agendamen__ag_an__320C68B7" msdata:parent="animal" msdata:child="agendamento" msdata:parentkey="ani_codigo" msdata:childkey="ag_animal" msprop:Generator_UserParentTable="animal" msprop:Generator_UserChildTable="agendamento" msprop:Generator_RelationVarName="relationFK__agendamen__ag_an__320C68B7" msprop:Generator_ChildPropName="GetagendamentoRows" msprop:Generator_UserRelationName="FK__agendamen__ag_an__320C68B7" msprop:Generator_ParentPropName="animalRow" />
+      <msdata:Relationship name="FK__agendamen__ag_se__33008CF0" msdata:parent="servico" msdata:child="agendamento_servicos" msdata:parentkey="serv_codigo" msdata:childkey="ag_serv_servico" msprop:Generator_UserParentTable="servico" msprop:Generator_UserChildTable="agendamento_servicos" msprop:Generator_RelationVarName="relationFK__agendamen__ag_se__33008CF0" msprop:Generator_ChildPropName="Getagendamento_servicosRows" msprop:Generator_UserRelationName="FK__agendamen__ag_se__33008CF0" msprop:Generator_ParentPropName="servicoRow" />
+      <msdata:Relationship name="FK__agendamen__ag_se__33F4B129" msdata:parent="agendamento" msdata:child="agendamento_servicos" msdata:parentkey="ag_codigo" msdata:childkey="ag_serv_agendamento" msprop:Generator_UserParentTable="agendamento" msprop:Generator_UserChildTable="agendamento_servicos" msprop:Generator_RelationVarName="relationFK__agendamen__ag_se__33F4B129" msprop:Generator_ChildPropName="Getagendamento_servicosRows" msprop:Generator_ParentPropName="agendamentoRow" msprop:Generator_UserRelationName="FK__agendamen__ag_se__33F4B129" />
+      <msdata:Relationship name="FK__animal__ani_clie__30242045" msdata:parent="cliente" msdata:child="animal" msdata:parentkey="cli_codigo" msdata:childkey="ani_cliente" msprop:Generator_UserParentTable="cliente" msprop:Generator_UserChildTable="animal" msprop:Generator_RelationVarName="relationFK__animal__ani_clie__30242045" msprop:Generator_ChildPropName="GetanimalRows" msprop:Generator_UserRelationName="FK__animal__ani_clie__30242045" msprop:Generator_ParentPropName="clienteRow" />
+      <msdata:Relationship name="FK__animal__ani_raca__3118447E" msdata:parent="raca" msdata:child="animal" msdata:parentkey="raca_codigo" msdata:childkey="ani_raca" msprop:Generator_UserParentTable="raca" msprop:Generator_UserChildTable="animal" msprop:Generator_RelationVarName="relationFK__animal__ani_raca__3118447E" msprop:Generator_ChildPropName="GetanimalRows" msprop:Generator_UserRelationName="FK__animal__ani_raca__3118447E" msprop:Generator_ParentPropName="racaRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
