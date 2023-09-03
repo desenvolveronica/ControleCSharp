@@ -33,5 +33,20 @@ namespace Controle_c_
         {
             view_AnimaisClientesBindingSource.Filter = "ani_nome like '" + txtNome.Text + "%'";
         }
+
+        private void view_AnimaisClientesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                VariaveisGlobais.CodigoTroca = int.Parse(view_AnimaisClientesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            }
+            catch (Exception)
+            {
+                VariaveisGlobais.CodigoTroca = 0;
+            }
+
+            this.Dispose();
+        }
     }
 }

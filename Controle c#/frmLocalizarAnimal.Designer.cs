@@ -129,6 +129,7 @@
             this.view_AnimaisClientesDataGridView.ReadOnly = true;
             this.view_AnimaisClientesDataGridView.Size = new System.Drawing.Size(743, 205);
             this.view_AnimaisClientesDataGridView.TabIndex = 9;
+            this.view_AnimaisClientesDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_AnimaisClientesDataGridView_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

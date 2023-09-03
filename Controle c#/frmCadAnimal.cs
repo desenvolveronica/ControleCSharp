@@ -123,7 +123,7 @@ namespace Controle_c_
             if (VariaveisGlobais.CodigoTroca > 0) //ou seja, se ele encontrou algum registro
             {
                 //posicionar o codigo localizado
-                animalBindingSource.Position = animalBindingSource.Find("cli_codigo", VariaveisGlobais.CodigoTroca);
+                animalBindingSource.Position = animalBindingSource.Find("ani_codigo", VariaveisGlobais.CodigoTroca);
             }
         }
     }

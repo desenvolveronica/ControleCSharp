@@ -292,6 +292,9 @@ namespace Controle_c_
             }
         }
 
-       
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

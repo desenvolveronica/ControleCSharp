@@ -35,8 +35,8 @@
             System.Windows.Forms.Label ag_situacaoLabel;
             System.Windows.Forms.Label ag_totalLabel;
             System.Windows.Forms.Label ag_codigoLabel1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ag_codigoTextBox = new System.Windows.Forms.Label();
@@ -96,6 +96,7 @@
             this.servicoTableAdapter = new Controle_c_.masterDataSetTableAdapters.servicoTableAdapter();
             this.view_TotalServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_TotalServicosTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_TotalServicosTableAdapter();
+            this.btnLocalizar = new System.Windows.Forms.Button();
             ag_dataLabel = new System.Windows.Forms.Label();
             ag_horarioLabel = new System.Windows.Forms.Label();
             ag_animalLabel = new System.Windows.Forms.Label();
@@ -174,6 +175,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLocalizar);
             this.groupBox1.Controls.Add(ag_codigoLabel1);
             this.groupBox1.Controls.Add(this.ag_codigoTextBox);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -188,6 +190,7 @@
             this.groupBox1.Controls.Add(ag_totalLabel);
             this.groupBox1.Controls.Add(this.ag_totalTextBox);
             this.groupBox1.Enabled = false;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(81, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(835, 343);
@@ -467,9 +470,9 @@
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ag_serv_valor_unitario";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor unitário";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -478,9 +481,9 @@
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn8.HeaderText = "Subtotal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -708,6 +711,17 @@
             // 
             this.view_TotalServicosTableAdapter.ClearBeforeFill = true;
             // 
+            // btnLocalizar
+            // 
+            this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocalizar.Location = new System.Drawing.Point(682, 199);
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.Size = new System.Drawing.Size(92, 37);
+            this.btnLocalizar.TabIndex = 15;
+            this.btnLocalizar.Text = "Localizar";
+            this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
+            // 
             // frmCadAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -806,5 +820,6 @@
         private System.Windows.Forms.BindingSource view_TotalServicosBindingSource;
         private masterDataSetTableAdapters.View_TotalServicosTableAdapter view_TotalServicosTableAdapter;
         private System.Windows.Forms.Label ag_codigoTextBox;
+        private System.Windows.Forms.Button btnLocalizar;
     }
 }
