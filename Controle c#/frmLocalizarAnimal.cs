@@ -16,5 +16,12 @@ namespace Controle_c_
         {
             InitializeComponent();
         }
+
+        private void frmLocalizarAnimal_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_AnimaisClientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_AnimaisClientesTableAdapter.Fill(this.masterDataSet.View_AnimaisClientes);
+
+        }
     }
 }
