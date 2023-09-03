@@ -42,7 +42,7 @@ namespace Controle_c_
                 this.Validate();
                 this.clienteBindingSource.EndEdit();
                 clienteTableAdapter.Update(masterDataSet.cliente);
-                groupBox1.Enabled = false;
+                btnLocalizar.Enabled = false;
                 MessageBox.Show("Salvo com sucesso");
             }
             catch (Exception) { //captura o erro
@@ -59,7 +59,7 @@ namespace Controle_c_
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             clienteBindingSource.AddNew();
-            groupBox1.Enabled = true;
+            btnLocalizar.Enabled = true;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -73,12 +73,12 @@ namespace Controle_c_
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             clienteBindingSource.CancelEdit();
-            groupBox1.Enabled = false;
+            btnLocalizar.Enabled = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = true;
+            btnLocalizar.Enabled = true;
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -122,9 +122,10 @@ namespace Controle_c_
             
         }
 
-        private void cli_fotoPictureBox_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            frmLocalizarCliente localizarCliente = new frmLocalizarCliente();
+            localizarCliente.ShowDialog();  
         }
     }
 }

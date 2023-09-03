@@ -37,7 +37,7 @@
             System.Windows.Forms.Label cli_enderecoLabel;
             System.Windows.Forms.Label cli_fotoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCliente));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLocalizar = new System.Windows.Forms.GroupBox();
             this.btnFoto = new System.Windows.Forms.Button();
             this.cli_codigoLabel1 = new System.Windows.Forms.Label();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,6 +66,7 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             cli_codigoLabel = new System.Windows.Forms.Label();
             cli_nomeLabel = new System.Windows.Forms.Label();
@@ -74,7 +75,7 @@
             cli_cpfLabel = new System.Windows.Forms.Label();
             cli_enderecoLabel = new System.Windows.Forms.Label();
             cli_fotoLabel = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.btnLocalizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cli_fotoPictureBox)).BeginInit();
@@ -145,33 +146,33 @@
             cli_fotoLabel.TabIndex = 12;
             cli_fotoLabel.Text = "cli foto:";
             // 
-            // groupBox1
+            // btnLocalizar
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.btnFoto);
-            this.groupBox1.Controls.Add(cli_codigoLabel);
-            this.groupBox1.Controls.Add(this.cli_codigoLabel1);
-            this.groupBox1.Controls.Add(cli_nomeLabel);
-            this.groupBox1.Controls.Add(this.cli_nomeTextBox);
-            this.groupBox1.Controls.Add(cli_celularLabel);
-            this.groupBox1.Controls.Add(this.cli_celularMaskedTextBox);
-            this.groupBox1.Controls.Add(cli_emailLabel);
-            this.groupBox1.Controls.Add(this.cli_emailTextBox);
-            this.groupBox1.Controls.Add(cli_cpfLabel);
-            this.groupBox1.Controls.Add(this.cli_cpfMaskedTextBox);
-            this.groupBox1.Controls.Add(cli_enderecoLabel);
-            this.groupBox1.Controls.Add(this.cli_enderecoTextBox);
-            this.groupBox1.Controls.Add(cli_fotoLabel);
-            this.groupBox1.Controls.Add(this.cli_fotoPictureBox);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1184, 684);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados do Cliente";
+            this.btnLocalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLocalizar.Controls.Add(this.btnFoto);
+            this.btnLocalizar.Controls.Add(cli_codigoLabel);
+            this.btnLocalizar.Controls.Add(this.cli_codigoLabel1);
+            this.btnLocalizar.Controls.Add(cli_nomeLabel);
+            this.btnLocalizar.Controls.Add(this.cli_nomeTextBox);
+            this.btnLocalizar.Controls.Add(cli_celularLabel);
+            this.btnLocalizar.Controls.Add(this.cli_celularMaskedTextBox);
+            this.btnLocalizar.Controls.Add(cli_emailLabel);
+            this.btnLocalizar.Controls.Add(this.cli_emailTextBox);
+            this.btnLocalizar.Controls.Add(cli_cpfLabel);
+            this.btnLocalizar.Controls.Add(this.cli_cpfMaskedTextBox);
+            this.btnLocalizar.Controls.Add(cli_enderecoLabel);
+            this.btnLocalizar.Controls.Add(this.cli_enderecoTextBox);
+            this.btnLocalizar.Controls.Add(cli_fotoLabel);
+            this.btnLocalizar.Controls.Add(this.cli_fotoPictureBox);
+            this.btnLocalizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLocalizar.Enabled = false;
+            this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLocalizar.Location = new System.Drawing.Point(0, 0);
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.Size = new System.Drawing.Size(1184, 684);
+            this.btnLocalizar.TabIndex = 0;
+            this.btnLocalizar.TabStop = false;
+            this.btnLocalizar.Text = "Dados do Cliente";
             // 
             // btnFoto
             // 
@@ -264,7 +265,6 @@
             this.cli_fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cli_fotoPictureBox.TabIndex = 13;
             this.cli_fotoPictureBox.TabStop = false;
-            this.cli_fotoPictureBox.Click += new System.EventHandler(this.cli_fotoPictureBox_Click);
             // 
             // clienteTableAdapter
             // 
@@ -303,7 +303,8 @@
             this.clienteBindingNavigatorSaveItem,
             this.btnCancelar,
             this.btnEditar,
-            this.btnSair});
+            this.btnSair,
+            this.toolStripButton1});
             this.clienteBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.clienteBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.clienteBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -441,6 +442,15 @@
             this.btnSair.Text = "Sair";
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(77, 24);
+            this.toolStripButton1.Text = "Localizar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -453,13 +463,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 684);
             this.Controls.Add(this.clienteBindingNavigator);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnLocalizar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadCliente";
             this.Text = "frmCadCliente";
             this.Load += new System.EventHandler(this.frmCadCliente_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.btnLocalizar.ResumeLayout(false);
+            this.btnLocalizar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cli_fotoPictureBox)).EndInit();
@@ -473,7 +483,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox btnLocalizar;
         private masterDataSet masterDataSet;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private masterDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
@@ -503,5 +513,6 @@
         private System.Windows.Forms.ToolStripButton btnSair;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         public System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
