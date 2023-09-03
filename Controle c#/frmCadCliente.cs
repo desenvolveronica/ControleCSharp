@@ -130,6 +130,7 @@ namespace Controle_c_
             if (VariaveisGlobais.CodigoTroca > 0) //ou seja, se ele encontrou algum registro
             {
                 //posicionar o codigo localizado
+                clienteBindingSource.Position = clienteBindingSource.Find("cli_codigo", VariaveisGlobais.CodigoTroca);
             }
         }
     }

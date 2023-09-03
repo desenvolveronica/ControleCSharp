@@ -44,7 +44,17 @@ namespace Controle_c_
 
         private void clienteDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                VariaveisGlobais.CodigoTroca = int.Parse(clienteDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString() );
 
+            }
+            catch (Exception)
+            {
+                VariaveisGlobais.CodigoTroca = 0;
+            }
+
+            this.Dispose();
         }
     }
 }
