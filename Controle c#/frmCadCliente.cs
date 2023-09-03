@@ -124,8 +124,13 @@ namespace Controle_c_
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            VariaveisGlobais.CodigoTroca = 0;
             frmLocalizarCliente localizarCliente = new frmLocalizarCliente();
-            localizarCliente.ShowDialog();  
+            localizarCliente.ShowDialog();
+            if (VariaveisGlobais.CodigoTroca > 0) //ou seja, se ele encontrou algum registro
+            {
+                //posicionar o codigo localizado
+            }
         }
     }
 }
