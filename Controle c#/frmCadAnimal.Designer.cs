@@ -75,6 +75,7 @@
             this.animalBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnLocalizaAnimal = new System.Windows.Forms.ToolStripButton();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -418,7 +419,8 @@
             this.bindingNavigatorDeleteItem,
             this.animalBindingNavigatorSaveItem,
             this.btnEditar,
-            this.btnCancelar});
+            this.btnCancelar,
+            this.btnLocalizaAnimal});
             this.animalBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.animalBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.animalBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -438,7 +440,6 @@
             this.btnAdicionar.RightToLeftAutoMirrorImage = true;
             this.btnAdicionar.Size = new System.Drawing.Size(34, 34);
             this.btnAdicionar.Text = "Adicionar novo";
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -546,6 +547,16 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnLocalizaAnimal
+            // 
+            this.btnLocalizaAnimal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLocalizaAnimal.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalizaAnimal.Image")));
+            this.btnLocalizaAnimal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLocalizaAnimal.Name = "btnLocalizaAnimal";
+            this.btnLocalizaAnimal.Size = new System.Drawing.Size(34, 34);
+            this.btnLocalizaAnimal.Text = "Localizar";
+            this.btnLocalizaAnimal.Click += new System.EventHandler(this.btnLocalizaAnimal_Click);
+            // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "cliente";
@@ -633,5 +644,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStripButton btnLocalizaAnimal;
     }
 }

@@ -23,5 +23,15 @@ namespace Controle_c_
             this.view_AnimaisClientesTableAdapter.Fill(this.masterDataSet.View_AnimaisClientes);
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            view_AnimaisClientesBindingSource.Filter = "ani_nome like '" + txtNome.Text + "%'";
+        }
     }
 }

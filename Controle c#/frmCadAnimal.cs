@@ -115,10 +115,16 @@ namespace Controle_c_
             groupBox1.Enabled=false;
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
+        private void btnLocalizaAnimal_Click(object sender, EventArgs e)
         {
-            
-        
+            VariaveisGlobais.CodigoTroca = 0;
+            frmLocalizarAnimal localizarAnimal = new frmLocalizarAnimal();
+            localizarAnimal.ShowDialog();
+            if (VariaveisGlobais.CodigoTroca > 0) //ou seja, se ele encontrou algum registro
+            {
+                //posicionar o codigo localizado
+                animalBindingSource.Position = animalBindingSource.Find("cli_codigo", VariaveisGlobais.CodigoTroca);
+            }
         }
     }
 }
