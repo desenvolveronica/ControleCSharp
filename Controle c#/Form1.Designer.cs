@@ -33,6 +33,7 @@
             this.btnMaxi = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.PanelLateral = new System.Windows.Forms.Panel();
+            this.panelSelecao = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAgendamentos = new System.Windows.Forms.Button();
             this.btnServicos = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.btnAnimais = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.PanelCentral = new System.Windows.Forms.Panel();
-            this.panelSelecao = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PanelTop.SuspendLayout();
             this.PanelLateral.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +103,7 @@
             // PanelLateral
             // 
             this.PanelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.PanelLateral.Controls.Add(this.groupBox1);
             this.PanelLateral.Controls.Add(this.panelSelecao);
             this.PanelLateral.Controls.Add(this.btnHome);
             this.PanelLateral.Controls.Add(this.btnAgendamentos);
@@ -110,10 +112,20 @@
             this.PanelLateral.Controls.Add(this.btnAnimais);
             this.PanelLateral.Controls.Add(this.btnClientes);
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLateral.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLateral.Location = new System.Drawing.Point(0, 43);
             this.PanelLateral.Name = "PanelLateral";
             this.PanelLateral.Size = new System.Drawing.Size(276, 684);
             this.PanelLateral.TabIndex = 1;
+            // 
+            // panelSelecao
+            // 
+            this.panelSelecao.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelSelecao.Location = new System.Drawing.Point(26, 75);
+            this.panelSelecao.Name = "panelSelecao";
+            this.panelSelecao.Size = new System.Drawing.Size(24, 50);
+            this.panelSelecao.TabIndex = 6;
+            this.panelSelecao.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnHome
             // 
@@ -204,14 +216,16 @@
             this.PanelCentral.Size = new System.Drawing.Size(1191, 684);
             this.PanelCentral.TabIndex = 2;
             // 
-            // panelSelecao
+            // groupBox1
             // 
-            this.panelSelecao.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panelSelecao.Location = new System.Drawing.Point(26, 75);
-            this.panelSelecao.Name = "panelSelecao";
-            this.panelSelecao.Size = new System.Drawing.Size(24, 50);
-            this.panelSelecao.TabIndex = 6;
-            this.panelSelecao.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.groupBox1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Location = new System.Drawing.Point(56, 466);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(192, 113);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Agendamentos";
             // 
             // Form1
             // 
@@ -248,6 +262,7 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Panel panelSelecao;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
