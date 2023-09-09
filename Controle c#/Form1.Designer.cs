@@ -54,6 +54,7 @@
             this.view_DetalhesAgendamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_DetalhesAgendamentosTableAdapter = new Controle_c_.masterDataSetTableAdapters.View_DetalhesAgendamentosTableAdapter();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.PanelTop.SuspendLayout();
             this.PanelLateral.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -136,6 +137,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblAgandado);
             this.groupBox1.Controls.Add(this.lblAndamento);
             this.groupBox1.Controls.Add(this.label2);
@@ -153,7 +155,7 @@
             // 
             this.lblAgandado.AutoSize = true;
             this.lblAgandado.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgandado.Location = new System.Drawing.Point(146, 89);
+            this.lblAgandado.Location = new System.Drawing.Point(146, 76);
             this.lblAgandado.Name = "lblAgandado";
             this.lblAgandado.Size = new System.Drawing.Size(17, 17);
             this.lblAgandado.TabIndex = 3;
@@ -174,7 +176,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 89);
+            this.label2.Location = new System.Drawing.Point(6, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 1;
@@ -329,6 +331,18 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(93, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Detalhes";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
@@ -382,6 +396,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAgandado;
         private System.Windows.Forms.Label lblAndamento;
+        private System.Windows.Forms.Button button1;
     }
 }
 

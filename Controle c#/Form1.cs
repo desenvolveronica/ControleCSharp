@@ -141,7 +141,7 @@ namespace Controle_c_
             //recarregar os dados na view
             view_DetalhesAgendamentosTableAdapter.Fill(masterDataSet.View_DetalhesAgendamentos);
             view_DetalhesAgendamentosBindingSource.Filter = "ag_data = '" + DateTime.Now.ToShortDateString() + "' and ag_situacao like 'Em Andamento'";
-
+            //FILTER EQUIVALE A CLAUSULA WHERE DO SQL
             int qtdAndamento = int.Parse(view_DetalhesAgendamentosBindingSource.Count.ToString());
             view_DetalhesAgendamentosBindingSource.RemoveFilter(); //retirou o filtro anterior
             lblAndamento.Text = qtdAndamento.ToString();
@@ -153,6 +153,6 @@ namespace Controle_c_
 
         }
 
-
+       
     }
 }
