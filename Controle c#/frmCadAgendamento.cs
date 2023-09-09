@@ -233,6 +233,7 @@ namespace Controle_c_
             if (MessageBox.Show("Após finalizado o agendamento não poderá ser alterado", "PetShop", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ag_situacaoComboBox.Text = "Finalizado"; //muda o text da combobox
+                agendamentoBindingSource.EndEdit(); //FINALIZAR EDIÇÃO
                 agendamentoTableAdapter.Update(masterDataSet.agendamento); //salva as alterações
                 MessageBox.Show("Agendamento finalizado com sucesso!", "PetShop", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //bloquear se estiver finalizado

@@ -130,17 +130,29 @@ namespace Controle_c_
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_DetalhesAgendamentos'. Você pode movê-la ou removê-la conforme necessário.
-            this.view_DetalhesAgendamentosTableAdapter.Fill(this.masterDataSet.View_DetalhesAgendamentos);
+            //this.view_DetalhesAgendamentosTableAdapter.Fill(this.masterDataSet.View_DetalhesAgendamentos);
             // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_ServicosAgendamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.view_ServicosAgendamentoTableAdapter.Fill(this.masterDataSet.View_ServicosAgendamento);
-
+            //this.view_ServicosAgendamentoTableAdapter.Fill(this.masterDataSet.View_ServicosAgendamento);
+            //ESTÁ CARREGANDO OS DADOS NO TIME ABAIXO (timer1_Tick)
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MessageBox.Show("OLA");
+            //recarregar os dados na view
+            view_DetalhesAgendamentosTableAdapter.Fill(masterDataSet.View_DetalhesAgendamentos);
+            view_DetalhesAgendamentosBindingSource.Filter = "ag_data = '" + DateTime.Now.ToShortDateString() + "' and ag_situacao like 'Em Andamento'";
+
+            int qtdAndamento = int.Parse(view_DetalhesAgendamentosBindingSource.Count.ToString());
+            view_DetalhesAgendamentosBindingSource.RemoveFilter(); //retirou o filtro anterior
+            lblAndamento.Text = qtdAndamento.ToString();
+
+            view_DetalhesAgendamentosBindingSource.Filter = "ag_data = '" + DateTime.Now.ToShortDateString() + "' and ag_situacao like 'Agendado'";
+            int qtdAgendado = int.Parse(view_DetalhesAgendamentosBindingSource.Count.ToString());
+            view_DetalhesAgendamentosBindingSource.RemoveFilter(); //retirou o filtro anterior
+            lblAgandado.Text = qtdAgendado.ToString();
+
         }
 
-        
+
     }
 }
