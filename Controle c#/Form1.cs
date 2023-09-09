@@ -153,6 +153,15 @@ namespace Controle_c_
 
         }
 
-       
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+           
+            frmDetalhesAgendamentos dtAgendamentos = new frmDetalhesAgendamentos();
+            dtAgendamentos.TopLevel = false;
+            dtAgendamentos.Dock = DockStyle.Fill;
+            PanelCentral.Controls.Clear();
+            PanelCentral.Controls.Add(dtAgendamentos);//neste ponto encaixa ao form1
+            dtAgendamentos.Show();
+        }
     }
 }
