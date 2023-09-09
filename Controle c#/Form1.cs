@@ -126,5 +126,21 @@ namespace Controle_c_
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_DetalhesAgendamentos'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_DetalhesAgendamentosTableAdapter.Fill(this.masterDataSet.View_DetalhesAgendamentos);
+            // TODO: esta linha de código carrega dados na tabela 'masterDataSet.View_ServicosAgendamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.view_ServicosAgendamentoTableAdapter.Fill(this.masterDataSet.View_ServicosAgendamento);
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            MessageBox.Show("OLA");
+        }
+
+        
     }
 }
